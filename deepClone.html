@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const deepClone1=(obj)=>{
+      return JSON.parse(JSON.stringify(obj));
+    }
+    const deepCloneArr=(arr)=>{
+      return [].concat(arr);
+    }
+    var cloneObj = function (obj) {
+      var newObj = {};
+      if (obj instanceof Array) {
+          newObj = [];
+      }
+      for (var key in obj) {
+        if(Object.prototype.hasOwnProperty(key)){
+          var val = obj[key];
+          //newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; //arguments.callee 在哪一个函数中运行，它就代表哪个函数, 一般用在匿名函数中。
+          newObj[key] = typeof val === 'object' ? cloneObj(val): val;          
+        }
+      }
+      return newObj;
+    };
+  </script>
+</body>
+</html>
