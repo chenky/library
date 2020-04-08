@@ -1,5 +1,7 @@
 ## 技术
 
+### [深入浅出nodejs作者前端技能汇总，包括推荐的书籍](https://github.com/JacksonTian/fks)
+
 ### [2020年3月最受欢迎的10个CSS项目](https://mp.weixin.qq.com/s/v9K_NzMCofqZrwQ8WMCV0A)
 
 ## 唤醒qq聊天窗口
