@@ -118,7 +118,7 @@
     },
 
 		/**
-		 * 产生制定范围的随机数
+		 * 产生指定范围的随机数
 		 * @param  {[type]}  lowerValue [description]
 		 * @param  {[type]}  upperValue [description]
 		 * @param  {Boolean} isNumber   [description]
