@@ -29,6 +29,27 @@ var eventUtil = {
       element["on" + type] = null;
     }
   },
+  // 添加触发事件方法
+  fireEvent: function(element, type, args){
+    args = args || {};
+    var event;
+    if(element.dispatchEvent){
+      event = document.createEvent("HTMLEvents");
+      event.initEvent(type,true,true);
+    } else {
+      event = document.createEventObject();
+    }
+    for (const key in args) {
+      if (args.hasOwnProperty(key)) {
+        event[key] = args[key];        
+      }
+    }
+    if(element.dispatchEvent){
+      element.dispatchEvent(event);
+    } else{
+      element.fireEvent("on"+type, event);
+    }
+  },
   getEvent: function (event) {
     //获取事件本身
     return event ? event : window.event;
