@@ -363,6 +363,7 @@
     return result;
   };
 
+  // 清空字符串前后的空格
   String.prototype.trim = function () {
     return String(this).replace(/^\s+|\s+$/g, "").replace(/(^[\s\u3000]+)|([\s\u3000]+$)/g, "");
   };
