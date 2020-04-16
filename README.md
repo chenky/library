@@ -85,6 +85,9 @@
 - [一个 Python 代码的加密器，可以防止别人看脚本源码](https://github.com/ga0/pyprotect)
 - [es2020新特性](https://alligator.io/js/es2020/)
 - [前端面试复习笔记](https://github.com/CavsZhouyou/Front-End-Interview-Notebook)
+- [无线电波的历史](http://www.ruanyifeng.com/blog/2006/08/the_story_of_marconi.html)
+- [现代医学200年，新英格兰医学杂志](http://www.ruanyifeng.com/blog/2012/01/modern_medicine_timeline.html)
+
 
 ## 前端开发
 
