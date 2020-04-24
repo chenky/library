@@ -50,6 +50,11 @@
   -  初始化本地配置文件，$ git submodule init
   -  检出父仓库列出的commit，$ git submodule update
 
+### git注意事项和错误及解决方案
+- [git clone 提示 fatal: unable to access  SSL certificate problem: self signed certificate  ](https://blog.csdn.net/qibobo/article/details/43527595)
+  - git clone 提示 fatal: unable to access  SSL certificate problem: self signed certificate  
+  - 解决方法是：git config --global http.sslVerify false
+- 
 
 ## 缓存
 - [前端清理缓存](https://stackoverflow.com/questions/49547/how-do-we-control-web-page-caching-across-all-browsers)
@@ -107,6 +112,50 @@
 - [跨平台错误日志系统sentry]
   - [官网](https://sentry.io/welcome/)
   - [github](https://github.com/getsentry/sentry-javascript)
+
+### webapi
+- [javascript event keycodes事件按键码值](http://keycode.info/)
+
+### [配置html5 history模式路由](https://router.vuejs.org/zh/guide/essentials/history-mode.html)
+- Apache
+```
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+```
+- nginx
+```
+location / {
+  try_files $uri $uri/ /index.html;
+}
+```
+- 原生node.js
+```node
+const http = require('http')
+const fs = require('fs')
+const httpPort = 80
+
+http.createServer((req, res) => {
+  fs.readFile('index.htm', 'utf-8', (err, content) => {
+    if (err) {
+      console.log('We cannot open "index.htm" file.')
+    }
+
+    res.writeHead(200, {
+      'Content-Type': 'text/html; charset=utf-8'
+    })
+
+    res.end(content)
+  })
+}).listen(httpPort, () => {
+  console.log('Server listening on: http://localhost:%s', httpPort)
+})
+```
 
 ### 类库
 - [一个实现各类图形的 CSS 库](https://github.com/chokcoco/magicCss)
