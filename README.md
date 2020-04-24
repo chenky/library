@@ -93,6 +93,10 @@
 - [无线电波的历史](http://www.ruanyifeng.com/blog/2006/08/the_story_of_marconi.html)
 - [现代医学200年，新英格兰医学杂志](http://www.ruanyifeng.com/blog/2012/01/modern_medicine_timeline.html)
 - [如何用网页脚本追踪用户](http://www.ruanyifeng.com/blog/2019/04/user-tracking.html)
+- [只需要5秒的真人语音，就可以提取语音特征，然后任何文本都可以转成该人的语音](https://google.github.io/tacotron/publications/speaker_adaptation/)
+- [浏览器禁用三方 Cookie 的分析](https://juejin.im/post/5e97124df265da47b27d97ff)
+- [一个纯 CSS 库，提供各种形状的背景图案](https://bansal.io/pattern-css)
+- [另一个纯 CSS 库，提供各种形状的背景图案](http://www.heropatterns.com/)
 
 ## 前端开发
 
