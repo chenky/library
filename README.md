@@ -101,6 +101,13 @@
 - [浏览器禁用三方 Cookie 的分析](https://juejin.im/post/5e97124df265da47b27d97ff)
 - [一个纯 CSS 库，提供各种形状的背景图案](https://bansal.io/pattern-css)
 - [另一个纯 CSS 库，提供各种形状的背景图案](http://www.heropatterns.com/)
+- [Web Worker 使用教程](http://www.ruanyifeng.com/blog/2018/07/web-worker.html)
+- [浏览器数据库indexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)
+- [Node 调试工具入门教程,chrome浏览器调试node](http://www.ruanyifeng.com/blog/2018/03/node-debugger.html)
+- [node事件循环 node-event-loop](http://www.ruanyifeng.com/blog/2018/02/node-event-loop.html)
+- [Ramda 函数库参考教程](http://www.ruanyifeng.com/blog/2017/03/ramda.html)
+- [npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
+- [Node.js 命令行程序开发教程](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
 
 ## 前端开发
 
