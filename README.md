@@ -108,6 +108,19 @@
 - [Ramda 函数库参考教程](http://www.ruanyifeng.com/blog/2017/03/ramda.html)
 - [npm scripts 使用指南](http://www.ruanyifeng.com/blog/2016/10/npm_scripts.html)
 - [Node.js 命令行程序开发教程](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
+- [字符编码笔记：ASCII，Unicode 和 UTF-8](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
+- [关于Unix哲学,软件开发的原则](http://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html)
+- [互联网协议五层架构1](http://www.ruanyifeng.com/blog/2012/05/internet_protocol_suite_part_i.html)
+- [互联网协议五层架构2](http://www.ruanyifeng.com/blog/2012/06/internet_protocol_suite_part_ii.html)
+- 代码抽象原则
+  - 一个函数或模块只做一件事情，复杂功能通过组合实现，少用继承
+  - 不要重复自己，抽象化
+  - 不要复杂化，尽快让软件运行起来
+  - 2，3有冲突，可行性方案是重复三次以上才抽象化提取封装
+- [DNS 原理入门 DNS查找](http://www.ruanyifeng.com/blog/2016/06/dns.html)
+- [黑白照片变成彩色照片，照片着色，照片彩色化](https://colorize.cc/)
+- [语种名称代码,语言包标识](http://www.ruanyifeng.com/blog/2008/02/codes_for_language_names.html)
+- [OWASP安全开发指南](https://github.com/OWASP/DevGuide)
 
 ## 前端开发
 
