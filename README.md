@@ -121,6 +121,7 @@
 - [黑白照片变成彩色照片，照片着色，照片彩色化](https://colorize.cc/)
 - [语种名称代码,语言包标识](http://www.ruanyifeng.com/blog/2008/02/codes_for_language_names.html)
 - [OWASP安全开发指南](https://github.com/OWASP/DevGuide)
+- [HTML Email 编写指南, 邮件中潜入html](http://www.ruanyifeng.com/blog/2013/06/html_email.html)
 
 ## 前端开发
 
