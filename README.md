@@ -122,6 +122,9 @@
 - [语种名称代码,语言包标识](http://www.ruanyifeng.com/blog/2008/02/codes_for_language_names.html)
 - [OWASP安全开发指南](https://github.com/OWASP/DevGuide)
 - [HTML Email 编写指南, 邮件中潜入html](http://www.ruanyifeng.com/blog/2013/06/html_email.html)
+- [双因素认证（2FA）教程](http://www.ruanyifeng.com/blog/2017/11/2fa-tutorial.html)
+
+
 
 ## 前端开发
 
