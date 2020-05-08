@@ -170,6 +170,7 @@ $ git archive
 - 更新submodule
   -  初始化本地配置文件，$ git submodule init
   -  检出父仓库列出的commit，$ git submodule update
+- [如何撤销 Git 操作](http://www.ruanyifeng.com/blog/2019/12/git-undo.html)
 
 ### git注意事项和错误及解决方案
 - [git clone 提示 fatal: unable to access  SSL certificate problem: self signed certificate  ](https://blog.csdn.net/qibobo/article/details/43527595)
@@ -250,7 +251,15 @@ $ git archive
 - [随机输出格言](http://www.ruanyifeng.com/blog/2015/04/fortune.html)
 - [git flow git提交流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
 - [Emoji简介，Emoji编程，Emoji嵌入](http://www.ruanyifeng.com/blog/2017/04/emoji.html)
-
+- [双因素认证（2FA）教程](http://www.ruanyifeng.com/blog/2017/11/2fa-tutorial.html)
+- [bash脚本set命令教程](http://www.ruanyifeng.com/blog/2017/11/bash-set.html)
+- [DDOS 攻击的防范教程](http://www.ruanyifeng.com/blog/2018/06/ddos.html)
+- [命令行通配符教程](http://www.ruanyifeng.com/blog/2018/09/bash-wildcards.html)
+- [Page Lifecycle API 教程，页面生命周期，网页生命周期](http://www.ruanyifeng.com/blog/2018/11/page_lifecycle_api.html)
+- [找回密码的功能设计](http://www.ruanyifeng.com/blog/2019/02/password.html)
+- [普通人的网页配色方案](http://www.ruanyifeng.com/blog/2019/03/coloring-scheme.html)
+- [CSS Grid 网格布局教程](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+- [GitHub OAuth 第三方登录示例教程](http://www.ruanyifeng.com/blog/2019/04/github-oauth.html)
 
 ## 前端开发
 
