@@ -260,6 +260,11 @@ $ git archive
 - [普通人的网页配色方案](http://www.ruanyifeng.com/blog/2019/03/coloring-scheme.html)
 - [CSS Grid 网格布局教程](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 - [GitHub OAuth 第三方登录示例教程](http://www.ruanyifeng.com/blog/2019/04/github-oauth.html)
+- [一个适用于中小企业的轻量级服务器自动化运维管理平台，界面为中文。功能包含主机管理、主机批量执行、主机在线终端、应用发布部署、端口监控、报警等](https://github.com/openspug/spug)
+- [定价心理学，定价策略，定价技巧](https://www.nickkolenda.com/psychological-pricing-strategies/)
+- [Nginx 的图形配置界面，点几下鼠标，自动生成配置文件，可以上传到服务器](https://www.digitalocean.com/community/tools/nginx)
+- [一个在线编写幻灯片的服务](https://deckdeckgo.com/)
+- [Leetcode 前 300 题，每道都进行了详细通俗的分析，并且提供多种思路解法](https://leetcode.wang/)
 
 ## 前端开发
 
