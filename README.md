@@ -265,6 +265,15 @@ $ git archive
 - [Nginx 的图形配置界面，点几下鼠标，自动生成配置文件，可以上传到服务器](https://www.digitalocean.com/community/tools/nginx)
 - [一个在线编写幻灯片的服务](https://deckdeckgo.com/)
 - [Leetcode 前 300 题，每道都进行了详细通俗的分析，并且提供多种思路解法](https://leetcode.wang/)
+- [如何分析照片的地理信息](https://www.secjuice.com/geolocation-osint-amateur-hour/)
+- [如何用链判断运算符?.重构代码](https://lea.verou.me/2020/06/refactoring-optional-chaining-into-a-large-codebase-lessons-learned/)
+- [KeePass：最安全的密码管理器](https://www.rmnof.com/article/keepass-password-manager/)
+- [DNS 查询的原理](https://jvns.ca/blog/how-updating-dns-works/)
+- [CSS 三角形生成器](https://www.dute.org/css-arrow)
+- [Scroll to text fragment 生成器，自动滚动到指定文字](https://github.com/chunliu/sttf-url-generator)
+- [网页录屏器，但是生成的录像文件的体积远远小于传统视频](https://github.com/oct16/TimeCat)
+- [根据用户的唯一 ID，自动生成头像图片的 JS 库](https://github.com/loweisz/generate-avatar)
+- [施普林格的免费书籍](https://hnarayanan.github.io/springer-books/#Computer%20Science)
 
 ## 前端开发
 
