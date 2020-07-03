@@ -274,6 +274,10 @@ $ git archive
 - [网页录屏器，但是生成的录像文件的体积远远小于传统视频](https://github.com/oct16/TimeCat)
 - [根据用户的唯一 ID，自动生成头像图片的 JS 库](https://github.com/loweisz/generate-avatar)
 - [施普林格的免费书籍](https://hnarayanan.github.io/springer-books/#Computer%20Science)
+- [电梯效果滚动到顶部](https://github.com/tholman/elevator.js)
+- [一个纯前端的在线图片格式转换工具，可以快速将图片转为另一种格式，并且提供多个参数可以调节](https://github.com/renzhezhilu/webp2jpg-online)
+- [一个在线的项目管理软件，用于 Bug 管理，比 Jira 用法简单](https://linear.app/)
+- [如何不靠运气变得富有](https://github.com/taosue/how-to-get-rich-without-getting-lucky/)
 
 ## 前端开发
 
@@ -370,6 +374,7 @@ http.createServer((req, res) => {
 - [The-Best-Frontend-JavaScript-Interview-Questions](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29)
 
 ### 错误日志监控
+- [百度统计（机型统计，品牌统计，系统统计，分辨率统计等等）](https://tongji.baidu.com/research/app#behavior)
 - [跨平台错误日志系统sentry]
   - [官网](https://sentry.io/welcome/)
   - [github](https://github.com/getsentry/sentry-javascript)
