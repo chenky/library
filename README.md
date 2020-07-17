@@ -278,6 +278,12 @@ $ git archive
 - [一个纯前端的在线图片格式转换工具，可以快速将图片转为另一种格式，并且提供多个参数可以调节](https://github.com/renzhezhilu/webp2jpg-online)
 - [一个在线的项目管理软件，用于 Bug 管理，比 Jira 用法简单](https://linear.app/)
 - [如何不靠运气变得富有](https://github.com/taosue/how-to-get-rich-without-getting-lucky/)
+- [前端word to HTML, 前端处理zip, 前端word to markdown, 前端生成word文档](https://mp.weixin.qq.com/s/_Y7V5KQrf0VF6KVTNqAljA)
+- [前端处理word文档，Mammoth.js把word文档转换成html，markdown，Text](https://github.com/mwilliamson/mammoth.js)
+- [前端处理zip文件，JSZip 是一个用于创建、读取和编辑 「.zip」 文件的 JavaScript 库](https://github.com/Stuk/jszip)
+- [前端读写excel数据到XLSX and JSON](https://github.com/exceljs/exceljs)
+- [前端动态生成word文档， html to word文档](https://github.com/evidenceprime/html-docx-js)
+- [LeetCode 的解答, 力扣解答](http://www.herbert.top:18080/leetcode/)
 
 ## 前端开发
 
