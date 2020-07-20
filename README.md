@@ -303,6 +303,7 @@ $ git archive
 - [跨平台错误日志系统sentry]
   - [官网](https://sentry.io/welcome/)
   - [github](https://github.com/getsentry/sentry-javascript)
+- [录屏软件，evcapture](https://www.ieway.cn/evcapture.html)
 
 ### webapi
 - [javascript event keycodes事件按键码值](http://keycode.info/)
