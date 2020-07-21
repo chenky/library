@@ -360,6 +360,13 @@ http.createServer((req, res) => {
   - [github address](https://github.com/zeit/swr)
 - [操作cookie类库，cookie.js](https://github.com/florian/cookie.js)
 - [不同模块共享数据，通过订阅发布模式实现](https://github.com/yanhaijing/data.js)
+- [javascript操作css3动画](http://visionmedia.github.io/move.js/)
+- [方便操作键盘上每个键的键位码](http://dmauro.github.io/Keypress/)
+- [检测用户的设备](https://github.com/joyqi/mobile-device-js)
+- [类型检查检测](https://github.com/arasatasaygin/is.js)
+- [快来试试这款非阻塞式，小清新的通知插件吧，对移动端有好，界面好到爆炸啊](https://github.com/jaredreich/notie)
+- [一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点等社交网站。](https://github.com/overtrue/share.js)
+- [js自带的数学运算不能满足你的需求了，那试试这个，扩展了很多数学运算](https://github.com/josdejong/mathjs)
 
 ### 前端进阶知识点
 1. [惰性求值](https://zhuanlan.zhihu.com/p/26535479)
