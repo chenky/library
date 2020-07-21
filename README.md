@@ -358,6 +358,8 @@ http.createServer((req, res) => {
     - [unijs/hooks教程说明](https://zhuanlan.zhihu.com/p/94030173)
 - [128.精读《Hooks 取数 - swr 源码》.md](https://github.com/dt-fe/weekly/blob/v2/128.%E7%B2%BE%E8%AF%BB%E3%80%8AHooks%20%E5%8F%96%E6%95%B0%20-%20swr%20%E6%BA%90%E7%A0%81%E3%80%8B.md)
   - [github address](https://github.com/zeit/swr)
+- [操作cookie类库，cookie.js](https://github.com/florian/cookie.js)
+- [不同模块共享数据，通过订阅发布模式实现](https://github.com/yanhaijing/data.js)
 
 ### 前端进阶知识点
 1. [惰性求值](https://zhuanlan.zhihu.com/p/26535479)
