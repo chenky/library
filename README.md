@@ -367,6 +367,10 @@ http.createServer((req, res) => {
 - [快来试试这款非阻塞式，小清新的通知插件吧，对移动端有好，界面好到爆炸啊](https://github.com/jaredreich/notie)
 - [一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点等社交网站。](https://github.com/overtrue/share.js)
 - [js自带的数学运算不能满足你的需求了，那试试这个，扩展了很多数学运算](https://github.com/josdejong/mathjs)
+- [一个 Web Components 组件库，非常易用](https://shoelace.style/components/dropdown)
+- [国内连接 npm 源服务器很慢，tbify 这个工具可以自动将 npm、yarn 等包管理工具连上国内的淘宝镜像，对工具和系统都是非侵入性的](https://github.com/fjc0k/tbify)
+- [在线工具，让一张平面图片变成 3D 书籍封面](https://3d-book-css.netlify.app/)
+- [谷歌发布的英文教程，没有高深的数学，向初学者介绍 TensorFlow 和深度学习](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/)
 
 ### 前端进阶知识点
 1. [惰性求值](https://zhuanlan.zhihu.com/p/26535479)
