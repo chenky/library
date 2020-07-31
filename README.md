@@ -284,6 +284,7 @@ $ git archive
 - [前端读写excel数据到XLSX and JSON](https://github.com/exceljs/exceljs)
 - [前端动态生成word文档， html to word文档](https://github.com/evidenceprime/html-docx-js)
 - [LeetCode 的解答, 力扣解答](http://www.herbert.top:18080/leetcode/)
+- [该网站提供一系列可以在线使用的 AI 工具，比如识别物体、识别手写数字、老照片着色、绘画生成等等](https://www.gradio.app/hub)
 
 ## 前端开发
 
@@ -371,6 +372,14 @@ http.createServer((req, res) => {
 - [国内连接 npm 源服务器很慢，tbify 这个工具可以自动将 npm、yarn 等包管理工具连上国内的淘宝镜像，对工具和系统都是非侵入性的](https://github.com/fjc0k/tbify)
 - [在线工具，让一张平面图片变成 3D 书籍封面](https://3d-book-css.netlify.app/)
 - [谷歌发布的英文教程，没有高深的数学，向初学者介绍 TensorFlow 和深度学习](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/)
+- [一个只用 HTML 和 CSS 实现的扫雷游戏，不使用 JavaScript](https://github.com/propjockey/css-sweeper)
+- [React 的表格组件库，新的 7.0 版完全采用 Hooks 设计](https://github.com/tannerlinsley/react-table)
+- [fullpage.js, vue，react版本，全屏展示页面](https://github.com/alvarotrigo/fullpage.js)
+- [跨浏览器兼容满屏API](https://github.com/sindresorhus/screenfull.js)
+- [时间控件moment.js](https://momentjs.com/)
+- [多点触摸类库](http://hammerjs.github.io/getting-started/)
+- [根据垂直空间显示网格块](https://masonry.desandro.com/)
+- [slick.js响应式，无限循环及更多功能的轮播组件](https://github.com/kenwheeler/slick)
 
 ### 前端进阶知识点
 1. [惰性求值](https://zhuanlan.zhihu.com/p/26535479)
@@ -389,6 +398,7 @@ http.createServer((req, res) => {
 14. promise, generator, async await
 15. 数据结构与算法
 16. [how to build your own react](https://pomb.us/build-your-own-react/)
+17. [一个 TypeScript 写的 JavaScript 解析器，也就是说使用 JavaScript 解析 JavaScript，支持最新的 ES2020 语法](https://github.com/KFlash/seafox)
 
 ### 前端面试题
 - [The-Best-Frontend-JavaScript-Interview-Questions](https://performancejs.com/post/hde6d32/The-Best-Frontend-JavaScript-Interview-Questions-%28written-by-a-Frontend-Engineer%29)
