@@ -293,7 +293,7 @@ $ git archive
 - [知乎purerender](https://zhuanlan.zhihu.com/purerender)
 - [知乎精读前端](https://zhuanlan.zhihu.com/FrontendPerusal)
 
-### 工具类及工程化类
+### 工具及工程化
 - gitlab
 - jinkens
 - webpack
@@ -305,6 +305,7 @@ $ git archive
   - [官网](https://sentry.io/welcome/)
   - [github](https://github.com/getsentry/sentry-javascript)
 - [录屏软件，evcapture](https://www.ieway.cn/evcapture.html)
+- [gif录屏工具，录屏软件，在百度网盘software文件夹中](http://xiazai.zol.com.cn/detail/45/446880.shtml)
 
 ### webapi
 - [javascript event keycodes事件按键码值](http://keycode.info/)
