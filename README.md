@@ -306,6 +306,13 @@ $ git archive
   - [github](https://github.com/getsentry/sentry-javascript)
 - [录屏软件，evcapture](https://www.ieway.cn/evcapture.html)
 - [gif录屏工具，录屏软件，在百度网盘software文件夹中](http://xiazai.zol.com.cn/detail/45/446880.shtml)
+- [Mocha、Ava、Jest 是目前非常流行的三大 JavaScript 测试框架，本文对它们进行了比较，每个框架最合适的运行场景。](https://github.com/scraggo/comparing-javascript-test-runners/blob/master/README.md)
+- [本文用清晰的图形解释了五种 Git 工作流程，比如上图是 master - develop - feature 的工作流程](https://zepel.io/blog/5-git-workflows-to-improve-development/) 
+- [一个网页表格库，类似 Excel 的效果。](https://github.com/mengshukeji/Luckysheet)
+- [一个开源的富文本编辑器，功能丰富。](https://github.com/acccco/zebra-editor-core)
+- [这个网站提供一个 API，可以让你定制想要的随机数据，以 JSON 格式返回。](https://random-data-api.com/)
+- [一个 SVG 图片（主要是图标）的搜索引擎。](https://www.svgrepo.com/)
+
 
 ### webapi
 - [javascript event keycodes事件按键码值](http://keycode.info/)
