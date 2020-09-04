@@ -289,6 +289,7 @@ $ git archive
 - [css渐变代码片段](https://www.gradientmagic.com/)
 - [任何文本实现3D效果ztext.js](https://bennettfeely.com/ztext/)
 - [通过一段加密文本判断使用的加密算法，使用人工智能算法](https://github.com/Ciphey/Ciphey)
+- [各种好用的在线工具](https://github.com/zhaoolee/OnlineToolsBook)
 
 ## 前端开发
 
