@@ -317,6 +317,7 @@ $ git archive
 - [一个开源的富文本编辑器，功能丰富。](https://github.com/acccco/zebra-editor-core)
 - [这个网站提供一个 API，可以让你定制想要的随机数据，以 JSON 格式返回。](https://random-data-api.com/)
 - [一个 SVG 图片（主要是图标）的搜索引擎。](https://www.svgrepo.com/)
+- [微前端](https://juejin.im/post/6864381092061773831)
 
 
 ### webapi
