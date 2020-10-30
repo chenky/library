@@ -430,6 +430,11 @@ http.createServer((req, res) => {
 - [多点触摸类库](http://hammerjs.github.io/getting-started/)
 - [根据垂直空间显示网格块](https://masonry.desandro.com/)
 - [slick.js响应式，无限循环及更多功能的轮播组件](https://github.com/kenwheeler/slick)
+- [React 的时间轴组件,react-chrono](https://github.com/prabhuignoto/react-chrono)
+- [网页瀑布流的布局库,Masonry](https://masonry.desandro.com/)
+- [一个命令行的视频处理工具，属于 FFmpeg 的包装库，提供简单易用的语法格式。](https://github.com/yuanqing/vdx)
+- [Diode 可以将本机（localhost）的网站公开到互联网上，提供一个二级域名，使得外部用户可以访问。](https://support.diode.io/article/ss32engxlq)
+- [一个在线电台，播放适合工作时收听的音乐，提供几个不同风格的频道，比如平静的音乐或有节奏感的音乐](https://deepwork.fm/)
 
 ### 前端进阶知识点
 1. [惰性求值](https://zhuanlan.zhihu.com/p/26535479)
