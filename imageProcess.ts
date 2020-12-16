@@ -1,6 +1,7 @@
 import { ElUploadInternalRawFile } from 'element-ui/types/upload'
 import { compress, compressAccurately, ICompressConfig, compressAccuratelyConfig } from 'image-conversion'
 
+// 图片压缩
 export async function compressImgRaw (
   imgRaw: ElUploadInternalRawFile,
   config: ICompressConfig | compressAccuratelyConfig | number
