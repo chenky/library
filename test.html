@@ -6,58 +6,66 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="useragent"></div>
     <script>
-      Array.prototype.shuffle = function () {
-        let j;
-        let i = this.length;
-        while (i > 0) {
-          j = parseInt(Math.random() * i);
-          i--;
-          [this[j], this[i]] = [this[i], this[j]];
-        }
-        return this;
-      };
-      // 带权重的数组乱序，格式[{value:"val1", priority:1},{value:"val2", priority:9},...]
-      // priority的值在[0,1]之间，包括0，小于1
-      Array.prototype.shuffleWithPriority = function () {
-        let prioritySum = this.reduce(
-          (total, elem) => total + elem.priority,
-          0
-        );
-        let j;
-        let i = this.length;
-        while (i > 0) {
-          let rnd = Math.random() 
-          j = parseInt(rnd * i);
-          i--;          
-          console.log((this[i].priority/prioritySum), rnd);
-          if((this[i].priority/prioritySum)>rnd && !this[j].switch){
-            [this[j], this[i]] = [this[i], this[j]];
-            this[j].switch = true;
-          }        
-        }
-        return this;
-      };
-      Array.prototype.random = function () {
-        const len = this.length;
-        return this[parseInt(Math.random() * len)];
-      };
+      // Array.prototype.shuffle = function () {
+      //   let j;
+      //   let i = this.length;
+      //   while (i > 0) {
+      //     j = parseInt(Math.random() * i);
+      //     i--;
+      //     [this[j], this[i]] = [this[i], this[j]];
+      //   }
+      //   return this;
+      // };
+      // // 带权重的数组乱序，格式[{value:"val1", priority:1},{value:"val2", priority:9},...]
+      // // priority的值在[0,1]之间，包括0，小于1
+      // Array.prototype.shuffleWithPriority = function () {
+      //   let prioritySum = this.reduce(
+      //     (total, elem) => total + elem.priority,
+      //     0
+      //   );
+      //   let j;
+      //   let i = this.length;
+      //   while (i > 0) {
+      //     let rnd = Math.random() 
+      //     j = parseInt(rnd * i);
+      //     i--;          
+      //     console.log((this[i].priority/prioritySum), rnd);
+      //     if((this[i].priority/prioritySum)>rnd && !this[j].switch){
+      //       [this[j], this[i]] = [this[i], this[j]];
+      //       this[j].switch = true;
+      //     }        
+      //   }
+      //   return this;
+      // };
+      // Array.prototype.random = function () {
+      //   const len = this.length;
+      //   return this[parseInt(Math.random() * len)];
+      // };
 
-      // let arr = [1, 2, 3, 4, 5, 6, 7];
-      // console.log(arr.shuffle());
-      // console.log(arr.shuffle());
-      // console.log(arr.random());
-      console.log(
-        [
-          { value: 1, priority: 1 },
-          { value: 2, priority: 10 },
-          { value: 3, priority: 20 },
-          { value: 4, priority: 30 },
-          { value: 5, priority: 50 },
-          { value: 6, priority: 60 },
-        ].shuffleWithPriority()
+      // // let arr = [1, 2, 3, 4, 5, 6, 7];
+      // // console.log(arr.shuffle());
+      // // console.log(arr.shuffle());
+      // // console.log(arr.random());
+      // console.log(
+      //   [
+      //     { value: 1, priority: 1 },
+      //     { value: 2, priority: 10 },
+      //     { value: 3, priority: 20 },
+      //     { value: 4, priority: 30 },
+      //     { value: 5, priority: 50 },
+      //     { value: 6, priority: 60 },
+      //   ].shuffleWithPriority()
         
-      );
+      // );
+      const ua = navigator.userAgent
+      // is chrome 
+const isChrome = /(?:chrome|crios|crmo)\/(\d+(\.?_?\d+)+)/i.test(ua)
+// is safari
+const isSafari = /(iPhone|iPod|iPad).*AppleWebKit(?=.*Safari)/.test(ua)
+const isMobile = /[^-]mobi/i.test(ua)
+      document.querySelector("#useragent").innerText = isChrome + ',' + isSafari + "," + ua+","+isMobile;
     </script>
   </body>
 </html>
