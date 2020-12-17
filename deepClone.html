@@ -8,26 +8,55 @@
 </head>
 <body>
   <script>
+    // Date, function, Reg会有问题
     const deepClone1=(obj)=>{
       return JSON.parse(JSON.stringify(obj));
     }
-    const deepCloneArr=(arr)=>{
-      return [].concat(arr);
+    /*
+  javascript深度复制，深度拷贝
+  https://smalldata.tech/blog/2018/11/01/copying-objects-in-javascript
+*/
+function deepClone (obj) {
+  var copy
+
+  // Handle the 3 simple types, and null or undefined
+  if (null == obj || "object" != typeof obj) return obj
+
+  // Handle Date
+  if (obj instanceof Date) {
+    copy = new Date()
+    copy.setTime(obj.getTime())
+    return copy
+  }
+
+  // Handle Array
+  if (obj instanceof Array) {
+    copy = []
+    for (var i = 0, len = obj.length; i < len; i++) {
+      copy[i] = deepClone(obj[i])
     }
-    var cloneObj = function (obj) {
-      var newObj = {};
-      if (obj instanceof Array) {
-          newObj = [];
-      }
-      for (var key in obj) {
-        if(Object.prototype.hasOwnProperty(key)){
-          var val = obj[key];
-          //newObj[key] = typeof val === 'object' ? arguments.callee(val) : val; //arguments.callee 在哪一个函数中运行，它就代表哪个函数, 一般用在匿名函数中。
-          newObj[key] = typeof val === 'object' ? cloneObj(val): val;          
-        }
-      }
-      return newObj;
-    };
+    return copy
+  }
+
+  // Handle Function
+  if (obj instanceof Function) {
+    copy = function () {
+      return obj.apply(this, arguments)
+    }
+    return copy
+  }
+
+  // Handle Object
+  if (obj instanceof Object) {
+    copy = {}
+    for (var attr in obj) {
+      if (obj.hasOwnProperty(attr)) copy[attr] = deepClone(obj[attr])
+    }
+    return copy
+  }
+
+  throw new Error("Unable to copy obj as type isn't supported " + obj.constructor.name)
+}
   </script>
 </body>
 </html>
