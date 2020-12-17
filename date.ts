@@ -33,7 +33,7 @@ export function recentDaysRange (nDays = 1) {
 }
 
 // day:3表示3天后，-3表示3天前，ts：对比的时间， 毫秒数, 不能超过30天
-function isInDateArea (day: number, ts: number) {
+function isInDateArea (day = 0, ts = new Date().valueOf()) {
   var now = new Date()
   var curYear = now.getFullYear()
   var curMonth = now.getMonth() + 1
@@ -43,8 +43,6 @@ function isInDateArea (day: number, ts: number) {
   var endTs = new Date(curYear + "/" + curMonth + "/" + curDay + " 00:00:00").valueOf()
   var start = nowTs + day * 24 * 60 * 60 * 1000
   var end = endTs + 24 * 60 * 60 * 1000
-  // console.log(new Date(start)+","+new Date(end));
-  ts = parseFloat(ts) || new Date()  // n 的格式为 毫秒数
   start = Math.min(start, end)
   end = Math.max(start, end)
   return ts >= start && ts < end ? true : false
