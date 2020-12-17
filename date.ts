@@ -103,3 +103,47 @@ export const dateFormatter = (date: Date | number | string, fmt = 'yyyy-MM-dd HH
   }
   return fmt
 }
+
+// /**
+//  * 判断闰年
+//  * @return {Boolean} 是闰年返回true，否则返回false。
+//  */
+// Date.prototype.isLeapYear = function () {
+//   // return new Date(this.getFullYear(),2,0).getDate();
+//   // return (0 == this.getFullYear() % 4 && ((this.getFullYear() % 100 != 0) || (this.getFullYear() % 400 == 0)));
+//   return (0 == this.getFullYear() % 4 && ((this.getFullYear() % 100 != 0) || (this.getFullYear() % 400 == 0)))
+// }
+// /**
+//    * 返回指定格式的日期;	/// 格式 YYYY/yyyy/YY/yy 表示年份
+// /// MM/M 月份
+// /// W/w 星期
+// /// dd/DD/d/D 日期
+// /// hh/HH/h/H 时间
+// /// mm/m 分钟
+// /// ss/SS/s/S 秒
+//  * @param  {String} format 日期格式字符串
+//  * @return {Date}        返回指定格式的日期
+//  */
+// Date.prototype.format = function (format) {
+//   var week = ['日', '一', '二', '三', '四', '五', '六']
+//   var o = {
+//     "M+": this.getMonth() + 1, //month
+//     "d+|D+": this.getDate(), //day
+//     "h+|H+": this.getHours(), //hour
+//     "w|W": week[this.getDay()], // week
+//     "m+": this.getMinutes(), //minute
+//     "s+": this.getSeconds() //seconds
+//   }
+
+//   // format year
+//   if (/(y+|Y+)/.test(format)) {
+//     format = format.replace(RegExp.$1, this.getFullYear().toString().substr(4 - RegExp.$1.length))
+//   }
+
+//   for (var k in o) {
+//     if (new RegExp("(" + k + ")").test(format)) {
+//       format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length))
+//     }
+//   }
+//   return format
+// }
