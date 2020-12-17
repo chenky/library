@@ -90,3 +90,16 @@ Array.prototype.random = function () {
   return result
 }
 // console.log(shuffle([1,2,3,4,5,6,7,8,9]));
+
+// 生成随机字符串,[0-9a-z]数字与字母的组合
+function generateRandomAlphaNum (len = 1) {
+  var rdmString = ""
+  while (rdmString.length < len) {
+    const tempStr = Math.random().toString(36)
+    // console.log('tempStr', tempStr)
+    rdmString += tempStr.substr(2)
+    // console.log('rdmString', rdmString)
+  }
+  // console.log('out while rdmString', rdmString)
+  return rdmString.substr(0, len)
+}
