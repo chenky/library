@@ -290,6 +290,10 @@ $ git archive
 - [任何文本实现3D效果ztext.js](https://bennettfeely.com/ztext/)
 - [通过一段加密文本判断使用的加密算法，使用人工智能算法](https://github.com/Ciphey/Ciphey)
 - [各种好用的在线工具](https://github.com/zhaoolee/OnlineToolsBook)
+- [一个开源的在线工具，可以为小视频加上水印图片](https://shotstack.io/demo/watermarker/)
+- [该网站提供 Youtube 上面没有版权保护的背景音乐下载](https://mugle.io/)
+- [该网站收集各种常用的正则表达式，比如搜索"email"，会返回961个正则表达式](https://regexlib.com/)
+- [正则表达式图形化，帮助更好的理解正则表达式](https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24)
 
 ## 前端开发
 
