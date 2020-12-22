@@ -33,6 +33,7 @@ export function recentDaysRange (nDays = 1) {
 }
 
 // day:3表示3天后，-3表示3天前，ts：对比的时间， 毫秒数, 不能超过30天
+// 判断ts时间是不是在[day, 今天]或[今天， day]区间
 function isInDateArea (day = 0, ts = new Date().valueOf()) {
   var now = new Date()
   var curYear = now.getFullYear()
