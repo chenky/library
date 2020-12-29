@@ -48,7 +48,16 @@ function isInDateArea (day = 0, ts = new Date().valueOf()) {
   end = Math.max(start, end)
   return ts >= start && ts < end ? true : false
 }
-
+/**
+ * 日期是否在范围内
+ * @param  {Date} startDate 开始日期
+ * @param  {Date} endDate 结束日期
+ * @param  {Date} checkDate 校验日期
+ * @return {Boolean} 是否在日期范围内
+*/
+function isInDateRang (startDate = new Date(), endDate = new Date(), checkDate = new Date()) {
+  return checkDate.valueOf() >= startDate.valueOf() && checkDate.valueOf() <= endDate.valueOf() ? true : false
+}
 /**
  * 判断闰年
  * @return {Boolean} 是闰年返回true，否则返回false。
