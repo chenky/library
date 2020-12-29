@@ -58,6 +58,27 @@ function isInDateArea (day = 0, ts = new Date().valueOf()) {
 function isInDateRang (startDate = new Date(), endDate = new Date(), checkDate = new Date()) {
   return checkDate.valueOf() >= startDate.valueOf() && checkDate.valueOf() <= endDate.valueOf() ? true : false
 }
+
+/**
+ * @param date: 传入的日期
+ * @param diffDays: 在date日期基础上加减的天数
+*/
+export function setDay (date = new Date(), diffDays = 0): Date {
+  const retDate = new Date(date.valueOf())
+  retDate.setDate(retDate.getDate() + diffDays)
+  return retDate
+}
+
+/**
+ * @param date: 传入的日期
+ * @param diffMonth: 在date日期基础上加减的月数
+*/
+export function setMonth (date = new Date(), diffMonth = 0): Date {
+  const retDate = new Date(date.valueOf())
+  retDate.setMonth(retDate.getMonth() + diffMonth)
+  return retDate
+}
+
 /**
  * 判断闰年
  * @return {Boolean} 是闰年返回true，否则返回false。
