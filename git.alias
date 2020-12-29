@@ -1,0 +1,41 @@
+#!/bin/bash
+# 代码合并，代码合并到主干，并推送到远程分支，批处理bash
+################# functions #################
+
+# 查看 git 别名
+# @param $1 - 过滤条件，默认为'git'
+_galias () {
+    filter='git'
+    [ $# -ne 0 ] && filter="$@"
+    alias | grep "$filter"
+}
+
+# 推送到远程分支
+# @param $1 远程分支名称，必须
+_pushbr() {
+    # 参数校验
+    [ $# -ne 1 ] && {
+        echo 'usage: pushbr [branch-name]'
+        return 1 
+    }
+
+    git checkout $1 &&\
+    git pull --no-edit &&\
+    git merge - --no-edit &&\
+    git push;
+    git checkout - &&\
+    git merge -;
+}
+
+# 推送到远程 $dev & $build 分支
+_pushori() {
+    # _pushbr $dev &&\
+    _pushbr $build
+}
+
+
+################# alias #################
+
+alias galias='_galias'
+alias pushbr='_pushbr'
+alias pushori='_pushori'
