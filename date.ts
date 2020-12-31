@@ -135,6 +135,20 @@ export const dateFormatter = (date: Date | number | string, fmt = 'yyyy-MM-dd HH
   return fmt
 }
 
+/**
+ * 获取当周周一和周日的日期
+ * @return { mondayDate: Date, sundayDate: Date }
+*/
+export function getMondaySundayDate () {
+  const now = new Date()
+  const nowTime = now.getTime()
+  const day = now.getDay() || 7 // 为周日的时候 day 修改为7  否则当天周天会有问题
+  const oneDayTime = 24 * 60 * 60 * 1000
+  const mondayDate = nowTime - (day - 1) * oneDayTime // 显示周一
+  const sundayDate = nowTime + (7 - day) * oneDayTime // 显示周日
+  return { mondayDate: new Date(mondayDate), sundayDate: new Date(sundayDate) }
+}
+
 // /**
 //  * 判断闰年
 //  * @return {Boolean} 是闰年返回true，否则返回false。
