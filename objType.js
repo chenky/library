@@ -59,6 +59,30 @@
     return true
   }
 
+  /**
+   * 有时你需要知道某些内容是否为空，并根据结果决定要使用的方法，
+   * 例如检查长度、大小或是否包含任何子元素。下面这个工具打包了这些功能，
+   * 你可以用它检查 String、Object、Array、Map 和 Set 的大小。
+  */
+  function isEmpty (x) {
+    if (Array.isArray(x)
+      || typeof x === 'string'
+      || x instanceof String
+    ) {
+      return x.length === 0
+    }
+
+    if (x instanceof Map || x instanceof Set) {
+      return x.size === 0
+    }
+
+    if (({}).toString.call(x) === '[object Object]') {
+      return Object.keys(x).length === 0
+    }
+
+    return false
+  }
+
   function isArrayLike (obj) {
 
     // Support: real iOS 8.2 only (not reproducible in simulator)
