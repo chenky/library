@@ -294,6 +294,8 @@ $ git archive
 - [该网站提供 Youtube 上面没有版权保护的背景音乐下载](https://mugle.io/)
 - [该网站收集各种常用的正则表达式，比如搜索"email"，会返回961个正则表达式](https://regexlib.com/)
 - [正则表达式图形化，帮助更好的理解正则表达式](https://jex.im/regulex/#!flags=&re=%5E(a%7Cb)*%3F%24)
+- [markdown转pdf，markdown to pdf](https://github.com/BlueHatbRit/mdpdf)
+- [计算机教育中缺失的一课, 各种命令行，文本编辑器等等各种工具](https://missing-semester-cn.github.io/)
 
 ## 前端开发
 
