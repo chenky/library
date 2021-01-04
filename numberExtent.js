@@ -107,3 +107,30 @@ function addNumber (num1, num2) {
   return resualtIntArr.join('') + '.' + resualtDecimalsArr.join('')
 };
 console.log(addNumber('1234567890123456789.98', 1.13))
+
+// 创建一个范围内的数字
+/**
+ * Python 里我很喜欢的一个功能是 range 函数，而在 JavaScript 里我经常需要自己写这个功能。
+ * 下面是一个简单的实现，非常适合 for…of 循环以及需要特定范围内数字的情况。
+*/
+function range (maxOrStart, end = null, step = null) {
+  if (!end) {
+    return Array.from({ length: maxOrStart }, (_, i) => i)
+  }
+
+  if (end <= maxOrStart) {
+    return []
+  }
+
+  if (step !== null) {
+    return Array.from(
+      { length: Math.ceil(((end - maxOrStart) / step)) },
+      (_, i) => (i * step) + maxOrStart
+    )
+  }
+
+  return Array.from(
+    { length: Math.ceil((end - maxOrStart)) },
+    (_, i) => i + maxOrStart
+  )
+}
