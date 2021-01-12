@@ -82,3 +82,158 @@ const qqDomain = /^(\w+\.)*qq\.com$/
     let reg2 = new RegExp('^([\\s\\S]*)' + delimiter + '$', 'g')
     title = title.replace(reg1, '$1').replace(reg2, '$1')
 */
+
+/*
+正则基础语法
+
+[abc]
+单个字符:a或b或c
+[^abc]
+a,b,c以外的单个字符
+[a-zA-Z0-9]
+字符范围
+.
+任意字符
+\s
+空字符
+\S
+非空字符
+\d
+数字字符
+\D
+非数字字符
+\w
+单词(字母，数字，下划线)
+\W
+非单词
+\b
+单词边界
+\B
+非单词边界
+^
+开头
+$
+结尾
+(...)
+分组
+(a|b)
+a或b
+a*
+重复0次或多次
+a?
+重复0次或1次
+a+
+重复1次或多次
+a{3}
+重复3次
+a{3,}
+重复3次或多次
+a{3,5}
+重复3到5次
+?
+非贪婪匹配
+(?:abc)
+非捕获分组
+(?=abc)
+正向匹配abc
+(?!abc)
+正向不匹配abc
+\xhh
+十六进制hh字符
+\uhhhh
+十六进制hhhh字符
+\u{hhhh}
+(仅当设置了u标志时)十六进制hhhh字符
+\cX
+控制字符
+\0
+空字符
+\a
+alert字符
+\t
+制表符
+\n
+换行符
+\v
+垂直制表符
+\f
+换页符
+\r
+回车符
+\e
+escape字符
+[\b]
+退格符
+
+*/
+
+/*
+  正则表达式使用技能
+*/
+// 匹配多个空格，多次*，大于等于1次+，0到1次?, 限定次数{min, max}
+// const nbspWord = `htlle adfjdf adsfjdask &nbsp;&nbsp; adfa &nbsp;adfdasf&nbsp;
+// adsf &nbsp;
+// asdf&nbsp;&nbsp;adfasdf`
+// console.log(nbspWord.match(/(&nbsp;){2,}/g))
+
+// 回溯引用，在正则表达式中使用
+// const matchStr = `<h1>abc</h1><h6>abc</h6><h2>bbbb</h1>`
+// 会把不配对的<h2>bbbb</h1>也匹配进去
+// console.log(matchStr.match(/<h[1-6]>.*?<\/h[1-6]>/g))
+// 使用回溯引用则只会匹配配对的标签
+// console.log(matchStr.match(/<h([1-6])>.*?<\/h\1>/g))
+
+// 回溯引用在正则表达式之外使用
+// const replaceStr = `123-456`
+// const reg = /(\d{3})(-)(\d{3})/
+// // console.log(replaceStr.match(reg))
+// console.log(replaceStr.replace(reg, '($1),($3)'))
+
+// 大小写转换，使用replace函数
+// const lower2Upper = '<a>adbc</a>'
+// console.log(lower2Upper.replace(/(<a>)(.*?)(<\/a>)/, function (all, m1, m2, m3) {
+//   console.log('replace match', `${all},${m1},${m2},${m3}`)
+//   // return m2.toUpperCase()
+//   return m1 + m2.toUpperCase() + m3
+// }))
+
+
+// 前后查找
+// 向前匹配
+// const testUrl = `http://test.com.cn`
+// // 会把.也匹配进去
+// console.log(testUrl.match(/.+?(\.)/))
+// // 不会把.匹配进去
+// console.log(testUrl.match(/.+?(?=\.)/))
+// 向后匹配
+// const moneyStr = `前台：$134.33
+// 后台：$234.2`
+// console.log(moneyStr.match(/(?<=\$)[1-9.]+/g))
+// 向前向后匹配结合起来
+// const wrapStr = `adfasdf####我们的的世界####adfaf`
+// console.log(wrapStr.match(/(?<=#{4,4}).*?(?=#{4,4})/))
+// // 向前向后匹配不会算作捕获分组，所以这里的回溯引用是\1而不是\2
+// console.log(wrapStr.match(/(?<=(#{4,4})).*?(?=\1)/))
+
+// 对向前向后查找取非
+// const wrapStr2 = `ad333f #100, 1000#, #90#, 44,22, ##80###`
+// // 只匹配44,22
+// console.log(wrapStr2.match(/\b(?<!#)\d+(?!#)\b/g))
+
+const phoneStr = `123-456-789 
+(123)-456 789
+(123)-456-789
+(123)456 789 
+(123-456 789 
+123456789 
+123 456 789`
+// console.log(phoneStr.match(/\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{3}/g))
+// 回溯引用条件语法， (?(backreference)true-reg|false-reg)
+console.log(phoneStr.match(/(\()?\d{3}(?(1)\)|-)\d{3}-\d{4}/g))
+
+
+// html注释
+// const htmlCommentReg = /<!--{2,}.*?--{2,}>/g
+// // javascript注释
+// const jsCommentReg = /\/\/.*/g
+
