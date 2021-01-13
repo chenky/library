@@ -1,4 +1,8 @@
 /*
+  通过搜索可以找到常用正则表达式
+  常用正则表达式：https://regexlib.com/
+*/
+/*
 常用正则表达式
 链接：https://juejin.im/post/5aed6da16fb9a07aac2457f6
 */
@@ -61,6 +65,8 @@ let email = "/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\u
   number = "/^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/",
   // 保留两位小数点的数字，
   number2 = "/^(0?|([1-9]\d*))(?:\.\d{1,2})?$/",
+  // 正整数，小数合法性验证，其实就是钱验证，money验证,dollar验证，小数点后面保留5位，比上面的正则更严格精确
+  moneyReg = /^(0|([1-9]\d*))(?:\.\d{0,4}[1-9])?$/,
   // http://docs.jquery.com/Plugins/Validation/Methods/digits
   digits = "/^\d+$/",
   isInt = "/^[1-9]\d*$/", // 正整数
@@ -238,9 +244,18 @@ escape字符
 // const jsCommentReg = /\/\/.*/g
 
 // 非捕获分组
-const groupStr = `abcdef`
-// 捕获分组，会捕获ab，cd，ef三个分组
-console.log(groupStr.match(/(ab)(cd)(ef)/))
-// 非捕获分组，只会捕获ab，ef，不会捕获cd
-console.log(groupStr.match(/(ab)(?:cd)(ef)/))
+// const groupStr = `abcdef`
+// // 捕获分组，会捕获ab，cd，ef三个分组
+// console.log(groupStr.match(/(ab)(cd)(ef)/))
+// // 非捕获分组，只会捕获ab，ef，不会捕获cd
+// console.log(groupStr.match(/(ab)(?:cd)(ef)/))
+
+// 正整数，小数合法性验证，其实就是钱验证，money验证,dollar验证，小数点后面保留5位，比上面的正则更严格精确
+const digitFloatReg = /^(0|([1-9]\d*))(?:\.\d{0,4}[1-9])?$/
+console.log(digitFloatReg.test('0'), digitFloatReg.test('0.1'), digitFloatReg.test('10.1'))
+console.log(digitFloatReg.test('00'), digitFloatReg.test('0.00'), digitFloatReg.test('00.14'), digitFloatReg.test('0000100'), digitFloatReg.test('0.0100'))
+// 正则是对字符串匹配的，所以下面的number类型会先转换成字符串再匹配，这一点要特别注意
+console.log(digitFloatReg.test(0), digitFloatReg.test(0.1), digitFloatReg.test(10.1))
+console.log(digitFloatReg.test(00), digitFloatReg.test(0.00), digitFloatReg.test(0.14), digitFloatReg.test(0000100), digitFloatReg.test(0.0100))
+
 
