@@ -220,20 +220,27 @@ escape字符
 // // 只匹配44,22
 // console.log(wrapStr2.match(/\b(?<!#)\d+(?!#)\b/g))
 
-const phoneStr = `123-456-789 
-(123)-456 789
-(123)-456-789
-(123)456 789 
-(123-456 789 
-123456789 
-123 456 789`
-// console.log(phoneStr.match(/\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{3}/g))
-// 回溯引用条件语法， (?(backreference)true-reg|false-reg)
-console.log(phoneStr.match(/(\()?\d{3}(?(1)\)|-)\d{3}-\d{4}/g))
+// const phoneStr = `123-456-789 
+// (123)-456 789
+// (123)-456-789
+// (123)456 789 
+// (123-456 789 
+// 123456789 
+// 123 456 789`
+// // console.log(phoneStr.match(/\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{3}/g))
+// // 回溯引用条件语法， (?(backreference)true-reg|false-reg)
+// console.log(phoneStr.match(/(\()?\d{3}(?(1)\)|-)\d{3}-\d{4}/g))
 
 
 // html注释
 // const htmlCommentReg = /<!--{2,}.*?--{2,}>/g
 // // javascript注释
 // const jsCommentReg = /\/\/.*/g
+
+// 非捕获分组
+const groupStr = `abcdef`
+// 捕获分组，会捕获ab，cd，ef三个分组
+console.log(groupStr.match(/(ab)(cd)(ef)/))
+// 非捕获分组，只会捕获ab，ef，不会捕获cd
+console.log(groupStr.match(/(ab)(?:cd)(ef)/))
 
