@@ -297,6 +297,8 @@ $ git archive
 - [markdown转pdf，markdown to pdf](https://github.com/BlueHatbRit/mdpdf)
 - [计算机教育中缺失的一课, 各种命令行，文本编辑器等等各种工具](https://missing-semester-cn.github.io/)
 - [一个简易的HTML Editor](https://no-gravity.github.io/html_editor/)
+- [vue3源码分析](https://github.com/cuixiaorui/mini-vue)
+- [IT初学者教程](https://learn.freecodecamp.one/)
 
 ## 前端开发
 
