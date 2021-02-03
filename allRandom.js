@@ -103,3 +103,8 @@ function generateRandomAlphaNum (len = 1) {
   // console.log('out while rdmString', rdmString)
   return rdmString.substr(0, len)
 }
+
+// 生成随机IP， 赋值给 X-Forwarded-For
+function getRandomIP () {
+  return Array.from(Array(4)).map(() => parseInt(Math.random() * 255)).join('.')
+}
