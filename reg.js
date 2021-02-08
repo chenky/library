@@ -251,11 +251,14 @@ escape字符
 // console.log(groupStr.match(/(ab)(?:cd)(ef)/))
 
 // 正整数，小数合法性验证，其实就是钱验证，money验证,dollar验证，小数点后面保留5位，比上面的正则更严格精确
-const digitFloatReg = /^(0|([1-9]\d*))(?:\.\d{0,4}[1-9])?$/
-console.log(digitFloatReg.test('0'), digitFloatReg.test('0.1'), digitFloatReg.test('10.1'))
-console.log(digitFloatReg.test('00'), digitFloatReg.test('0.00'), digitFloatReg.test('00.14'), digitFloatReg.test('0000100'), digitFloatReg.test('0.0100'))
-// 正则是对字符串匹配的，所以下面的number类型会先转换成字符串再匹配，这一点要特别注意
-console.log(digitFloatReg.test(0), digitFloatReg.test(0.1), digitFloatReg.test(10.1))
-console.log(digitFloatReg.test(00), digitFloatReg.test(0.00), digitFloatReg.test(0.14), digitFloatReg.test(0000100), digitFloatReg.test(0.0100))
+// const digitFloatReg = /^(0|([1-9]\d*))(?:\.\d{0,4}[1-9])?$/
+// console.log(digitFloatReg.test('0'), digitFloatReg.test('0.1'), digitFloatReg.test('10.1'))
+// console.log(digitFloatReg.test('00'), digitFloatReg.test('0.00'), digitFloatReg.test('00.14'), digitFloatReg.test('0000100'), digitFloatReg.test('0.0100'))
+// // 正则是对字符串匹配的，所以下面的number类型会先转换成字符串再匹配，这一点要特别注意
+// console.log(digitFloatReg.test(0), digitFloatReg.test(0.1), digitFloatReg.test(10.1))
+// console.log(digitFloatReg.test(00), digitFloatReg.test(0.00), digitFloatReg.test(0.14), digitFloatReg.test(0000100), digitFloatReg.test(0.0100))
 
-
+// 给手机号打马赛克
+const originalPhone = '14775608858'
+const mosaicPhone = originalPhone.replace(/(\d{3})(\d{4})(\d*)/g, `${RegExp.$1}****${RegExp.$3}`)
+console.log(mosaicPhone)
