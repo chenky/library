@@ -259,6 +259,11 @@ escape字符
 // console.log(digitFloatReg.test(00), digitFloatReg.test(0.00), digitFloatReg.test(0.14), digitFloatReg.test(0000100), digitFloatReg.test(0.0100))
 
 // 给手机号打马赛克
-const originalPhone = '14775608858'
-const mosaicPhone = originalPhone.replace(/(\d{3})(\d{4})(\d*)/g, `${RegExp.$1}****${RegExp.$3}`)
-console.log(mosaicPhone)
+// const originalPhone = '14775608858'
+// const mosaicPhone = originalPhone.replace(/(\d{3})(\d{4})(\d*)/g, `${RegExp.$1}****${RegExp.$3}`)
+// // 或者
+// const mosaicPhone = phone.replace(/(\d{3})(\d{4})(\d*)/g, function (all, partOne, partTwo, partThree) {
+//   console.log(all, partOne, partTwo, partThree)
+//   return partOne + '****' + partThree;
+// })
+// console.log(mosaicPhone)
