@@ -114,6 +114,9 @@ $ git reset [commit]
 # 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
 $ git reset --hard [commit]
 
+# reset之后强制推到远程分支，一定要小心使用这个，因为它将强制覆盖远程分支内容
+$ git push -f
+
 # 重置当前HEAD为指定commit，但保持暂存区和工作区不变
 $ git reset --keep [commit]
 
