@@ -77,7 +77,7 @@ var url = {
     }
   },
   /*
- *	从URL中获取参数对应的值
+ *	从URL中获取参数对应的值，url中有hash的话会有bug
  */
   getUrlParamFromSearch: function (name, url, ignoreCase) {
     //参数：变量名，url为空则表从当前页面的url中取
@@ -86,6 +86,12 @@ var url = {
     let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
       r = u.substr(u.indexOf("\?") + 1).match(reg)
     return r != null ? decodeURIComponent(r[2]) : ""
+  },
+  // 支持hash，search中不存在hash值，所以没有这个问题
+  getSearchByName: function (name) {
+    const reg = new RegExp(`[?&]${name}=([^&#]+)`)
+    const query = location.search?.match(reg)?.[1] || ''
+    return decodeURIComponent(query)
   },
   // 从url的search参数中删除name参数
   removeParamFromSearch: function (name, url) {
