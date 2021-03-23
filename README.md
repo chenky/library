@@ -150,6 +150,8 @@ $ git archive
   - 切换到master， git checkout master, 同时获取最新代码，git pull
   - 基于当前master创建分支， git branch test(or git checkout -b test)
   - 当前分支推送到远程分支，git push origin test，或者git push origin test(本地分支名):test(远程分支名)
+- git merge一个指定文件, 从别的分支合并某个文件到当前分支
+  - git checkout other-branch（别的分支名）  xxxx（文件名）
 - 提交代码
   - git add .
   - git commit -m "commit information"
