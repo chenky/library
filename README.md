@@ -314,6 +314,7 @@ $ git archive
 
 ### 工具及工程化
 - gitlab
+- Snipaste.exe(可以把截图固定到屏幕上，很好用的软件)
 - jinkens
 - webpack
 - react react-router react-redux mobx
