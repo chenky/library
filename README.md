@@ -146,12 +146,40 @@ $ git archive
   - 切换到自己的分支，$ git checkout lbh
   - 将master主分支上的代码合并到当前分支，$ git merge master
   - 将本地的 lbh 分支推送至远端的 lbh分支，如果没有就新建一个，$ git push origin lbh
+- 回到合并前的状态
+  - git merge --abort
 - 创建分支
   - 切换到master， git checkout master, 同时获取最新代码，git pull
   - 基于当前master创建分支， git branch test(or git checkout -b test)
   - 当前分支推送到远程分支，git push origin test，或者git push origin test(本地分支名):test(远程分支名)
 - git merge一个指定文件, 从别的分支合并某个文件到当前分支
   - git checkout other-branch（别的分支名）  xxxx（文件名）
+- git撤销指定文件（也可以是指定文件夹）到指定版本
+  - git log [filename|folder]
+    - 例如： git log sompage.vue 或者 git log src/pages/somefolder
+  - git checkout <commitID> <filename|folder>
+    - 例如：  git checkout 0e3f0331e9654f77c32be7c6080dc877ebbb94a9 src/pages/somefolder
+- 文件被修改了，但未执行git add操作(working tree内撤销)
+  - git checkout [filename|folder|.] 
+- 同时对多个文件执行了git add操作，但本次只想提交其中一部分文件
+  - git status 查看stage暂存区（也叫index）中是否有待commit的项，即git add的项目
+  - git reset HEAD <filename|folder>
+- 文件执行了git add操作，但想撤销对其的修改（index内回滚）
+  - git reset HEAD <filename|folder>
+  - git checkout <filename|folder>
+- 修改的文件已被git commit，但想再次修改不再产生新的Commit
+  - git add something.txt
+  - git commit --amend -m "说明"
+- 已在本地进行了多次git commit操作，现在想撤销到其中某次Commit
+  - git reset [--hard|soft|mixed|merge|keep] [commitID|HEAD]
+- 如果想回滚已经提交到master中的文件或文件夹
+  - git checkout [branchname] <tag> <filename|folder>
+- 删除最后一次远程提交
+  - git revert HEAD && git push origin master
+  - git reset --hard HEAD^ && git push origin master -f
+- 回滚到指定版本
+  - git revert [commitID] [filename|folder] && git push origin master
+  - git reset --hard [commitID] [filename|folder] && git push origin master -f
 - 提交代码
   - git add .
   - git commit -m "commit information"
