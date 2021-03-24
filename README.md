@@ -180,6 +180,8 @@ $ git archive
 - 回滚到指定版本
   - git revert [commitID] [filename|folder] && git push origin master
   - git reset --hard [commitID] [filename|folder] && git push origin master -f
+- 撤销本地的commit，回滚到远程分支的代码
+  - git reset --hard origin/branchname
 - 提交代码
   - git add .
   - git commit -m "commit information"
