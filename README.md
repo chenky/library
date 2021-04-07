@@ -196,6 +196,8 @@ $ git archive
 - 查看所有分支
   - 本地分支和远程分支 git branch -a
   - 本地分支 git branch
+- 本地分支关联远程分支，可以修改本地分支关联另一个远程分支
+  - git branch --set-upstream-to=origin/remote-branch-name local-branch-name
 - 删除分支
   - 删除本地分支
     - 当前分支不能是要删除的分支，要先切换到别的分支，比如master分支 git checkout master
