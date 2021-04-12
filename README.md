@@ -180,6 +180,10 @@ $ git archive
 - 回滚到指定版本
   - git revert [commitID] [filename|folder] && git push origin master
   - git reset --hard [commitID] [filename|folder] && git push origin master -f
+- build分支某个文件夹（文件）代码覆盖开发本地分支cql-dev的某个文件夹（文件）
+  - git checkout cql-dev
+  - git rm -r someFolderName(或者手动删除某个文件夹)
+  - git checkout build src/pages/somefolderName
 - 撤销本地的commit，回滚到远程分支的代码
   - git reset --hard origin/branchname
 - 提交代码
