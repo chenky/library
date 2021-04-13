@@ -326,7 +326,7 @@ $ git archive
 - [前端动态生成word文档， html to word文档](https://github.com/evidenceprime/html-docx-js)
 - [LeetCode 的解答, 力扣解答](http://www.herbert.top:18080/leetcode/)
 - [该网站提供一系列可以在线使用的 AI 工具，比如识别物体、识别手写数字、老照片着色、绘画生成等等](https://www.gradio.app/hub)
-- [面试算法小抄，leetcode，动态规划，数据结构，算法思维](https://labuladong.gitbook.io/algo/)
+- [面试算法小抄，leetcode，动态规划，数据结构，算法思维](https://labuladong.gitee.io/algo/)
 - [css渐变代码片段](https://www.gradientmagic.com/)
 - [任何文本实现3D效果ztext.js](https://bennettfeely.com/ztext/)
 - [通过一段加密文本判断使用的加密算法，使用人工智能算法](https://github.com/Ciphey/Ciphey)
