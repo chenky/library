@@ -538,3 +538,18 @@ http.createServer((req, res) => {
 
 ## 经济理财
 - 17世纪荷兰郁金香泡沫，18世纪英国南海公司发行股票大骗局，其中大科学家牛顿就亏损了2万多英镑，相当于他10年总收入之和，1929-1933美国经济大萧条，1997-1998亚洲金融危机，2000-2001年互联网金融泡沫，2007-2008次贷危机。
+
+
+
+
+## 提升效率，小工具，批量处理命令
+- 微信双开批处理命令使用windows系统（其实可以扩展到多开任何应用程序）
+  ```powershell
+  @echo off
+
+  start "" "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
+
+  start "" "C:\Program Files (x86)\Tencent\WeChat\WeChat.exe"
+
+  exit
+  ```
