@@ -196,7 +196,7 @@ $ git archive
   - 查看本地tag， git show tagName
   - 推送到远程服务器 git push origin tagName
   - 删除本地tag, git tag -d tagName
-  - 删除远程分支， git push origin :refs/tags/tagName
+  - 删除远程分支，执行上面的基础上再  git push origin :refs/tags/tagName
 - 查看所有分支
   - 本地分支和远程分支 git branch -a
   - 本地分支 git branch
@@ -207,7 +207,7 @@ $ git archive
     - 当前分支不能是要删除的分支，要先切换到别的分支，比如master分支 git checkout master
     - 删除本地分支即可 git branch -d need-delete-branch-name
   - 删除远程分支
-    - git push origin :test  or  git push origin --delete test
+    - 删除本地分支基础上再执行 git push origin :test  或者直接删除远程分支  git push origin --delete test or git push -d origin branch-name
 - 更新submodule
   -  初始化本地配置文件，$ git submodule init
   -  检出父仓库列出的commit，$ git submodule update
