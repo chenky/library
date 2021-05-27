@@ -252,6 +252,19 @@ function setCaret (el, pos) {
   el.focus()
 }
 
+/**
+ * 获取对象属性，通过路径
+*/
+function getObjValByPath (obj, path) {
+  let paths = path.split('.')
+  let res = obj
+  let prop
+  while (prop = paths.shift()) {
+    res = res[prop]
+  }
+  return res
+}
+
 // 自关闭标签转换成标准的html关闭标签	
 function convert (html) {
   var tags = /^(abbr|br|col|img|input|link|meta|param|hr|area|embed)$/i
