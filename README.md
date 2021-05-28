@@ -340,7 +340,8 @@ $ git archive
 - [一个简易的HTML Editor](https://no-gravity.github.io/html_editor/)
 - [vue3源码分析](https://github.com/cuixiaorui/mini-vue)
 - [IT初学者教程](https://learn.freecodecamp.one/)
-- [大转盘抽奖](https://100px.net/)
+- [大转盘抽奖](https://100px.net/) 
+- [介绍如何构建一套可靠的分布式大型软件系统, 系统架构，架构师必备，架构设计，凤凰架构，大型分布式系统](http://icyfenix.cn/)
 
 ## 前端开发
 
