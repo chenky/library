@@ -71,41 +71,70 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 
 ## Quick links
 
-1. [copy a file](#copy-a-file)
-1. [duplicate a file](#duplicate-a-file)
-1. [copy a directory](#copy-a-directory)
-1. [duplicate a directory](#duplicate-a-directory)
-1. [move a file](#move-a-file)
-1. [rename a file](#rename-a-file)
-1. [move a directory](#move-a-directory)
-1. [rename a directory](#rename-a-directory)
-1. [merge directories](#merge-directories)
-1. [create a new file](#create-a-new-file)
-1. [create a new directory](#create-a-new-directory)
-1. [show file/directory size](#show-filedirectory-size)
-1. [show file/directory info](#show-filedirectory-info)
-1. [open a file with the default program](#open-a-file-with-the-default-program)
-1. [zip a directory](#zip-a-directory)
-1. [unzip a directory](#unzip-a-directory)
-1. [peek files in a zip file](#peek-files-in-a-zip-file)
-1. [remove a file](#remove-a-file)
-1. [remove a directory](#remove-a-directory)
-1. [list directory contents](#list-directory-contents)
-1. [tree view a directory and its subdirectories](#tree-view-a-directory-and-its-subdirectories)
-1. [find a stale file](#find-a-stale-file)
-1. [show a calendar](#show-a-calendar)
-1. [find a future date](#find-a-future-date)
-1. [use a calculator](#use-a-calculator)
-1. [force quit a program](#force-quit-a-program)
-1. [check server response](#check-server-response)
-1. [view content of a file](#view-content-of-a-file)
-1. [search for a text](#search-for-a-text)
-1. [view an image](#view-an-image)
-1. [show disk size](#show-disk-size)
-1. [check performance of your computer](#check-performance-of-your-computer)
-1. [Quick tips](#quick-tips)
-1. [Hotkeys](#hotkeys)
-1. [I can't remember these cryptic commands](#i-cant-remember-these-cryptic-commands)
+- [技术](#技术)
+  - [程序员必读书目（单）](#程序员必读书目单)
+  - [深入浅出 nodejs 作者前端技能汇总，包括推荐的书籍](#深入浅出-nodejs-作者前端技能汇总包括推荐的书籍)
+  - [2020 年 3 月最受欢迎的 10 个 CSS 项目](#2020-年-3-月最受欢迎的-10-个-css-项目)
+- [唤醒 qq 聊天窗口](#唤醒-qq-聊天窗口)
+- [bash 技巧 shell 技巧](#bash-技巧-shell-技巧)
+  - [bash 技巧，bash 历史命令查找](#bash-技巧bash-历史命令查找)
+  - [常用 shell 命令，常用 bash 命令，不需要 GUI，不需要界面操作](#常用-shell-命令常用-bash-命令不需要-gui不需要界面操作)
+- [Quick links](#quick-links)
+- [copy a file](#copy-a-file)
+- [duplicate a file](#duplicate-a-file)
+- [copy a directory](#copy-a-directory)
+- [duplicate a directory](#duplicate-a-directory)
+- [move a file](#move-a-file)
+- [rename a file](#rename-a-file)
+- [move a directory](#move-a-directory)
+- [rename a directory](#rename-a-directory)
+- [merge directories](#merge-directories)
+- [create a new file](#create-a-new-file)
+- [create a new directory](#create-a-new-directory)
+- [show file/directory size](#show-filedirectory-size)
+- [show file/directory info](#show-filedirectory-info)
+- [open a file with the default program](#open-a-file-with-the-default-program)
+- [zip a directory](#zip-a-directory)
+- [unzip a directory](#unzip-a-directory)
+- [peek files in a zip file](#peek-files-in-a-zip-file)
+- [remove a file](#remove-a-file)
+- [remove a directory](#remove-a-directory)
+- [list directory contents](#list-directory-contents)
+- [tree view a directory and its subdirectories](#tree-view-a-directory-and-its-subdirectories)
+- [find a stale file](#find-a-stale-file)
+- [show a calendar](#show-a-calendar)
+- [find a future date](#find-a-future-date)
+- [use a calculator](#use-a-calculator)
+- [force quit a program](#force-quit-a-program)
+- [check server response](#check-server-response)
+- [view content of a file](#view-content-of-a-file)
+- [search for a text](#search-for-a-text)
+- [view an image](#view-an-image)
+- [show disk size](#show-disk-size)
+- [check performance of your computer](#check-performance-of-your-computer)
+- [Quick tips](#quick-tips)
+- [Hotkeys](#hotkeys)
+- [git 技巧](#git-技巧)
+  - [git 注意事项和错误及解决方案](#git-注意事项和错误及解决方案)
+- [缓存](#缓存)
+  - [搜索技巧](#搜索技巧)
+- [教程](#教程)
+- [阮一峰技术博客](#阮一峰技术博客)
+- [前端开发](#前端开发)
+  - [技术博客](#技术博客)
+  - [工具及工程化](#工具及工程化)
+  - [webapi](#webapi)
+  - [配置 html5 history 模式路由](#配置-html5-history-模式路由)
+  - [类库](#类库)
+  - [前端进阶知识点](#前端进阶知识点)
+  - [前端面试题](#前端面试题)
+  - [错误日志监控](#错误日志监控)
+  - [移动端调试工具](#移动端调试工具)
+  - [Vue3.0](#vue30)
+- [终端命令](#终端命令)
+- [经济理财](#经济理财)
+- [提升效率，小工具，批量处理命令](#提升效率小工具批量处理命令)
+- [各种技术问题汇总及解决方案](#各种技术问题汇总及解决方案)
 
 ## copy a file
 
@@ -1028,3 +1057,28 @@ http
 
   exit
   ```
+
+
+## 各种技术问题汇总及解决方案
+- 在windows win10系统中把git for windows sdk中的完整bash功能（包括包管理工具pacman和zsh，oh-my-zsh）集成到vscode visual studio code中
+  - [win10下使用git for windows sdk快速搭建实用又美观的终端](https://www.jianshu.com/p/67df4d3aa22d)
+  - [把安装好的bash集成到vscode中]
+  ```javascript
+  // ctrl+shift+p, settings.json中
+      "terminal.integrated.profiles.windows": {
+        "Git Bash":null,
+        "Command Prompt": null,
+        "Ubuntu(WSL)": null,
+        "Bash": {
+          "path": "d:\\git-sdk-64\\usr\\bin\\bash.exe", // git for windows sdk安装的路径
+          "args": ["--login"]
+        }
+      },
+      "terminal.integrated.defaultProfile.windows": "Bash", // 默认打开的命令行
+  ```
+- 前端设置meta可以强制跳转到https
+```html
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+```
+- 前端项目npm install经常报错可能是nodejs版本不一致引起的，可以看看其他可以运行人的版本然后安装他们的版本试试
+- [nvm安装nodejs后，无法使用npm, 本质上是因为各个node版本下的node_modules没有npm，需要收到到淘宝镜像去下载对于版本的npm包，再解压到node_modules目录下](https://segmentfault.com/a/1190000023716452)
