@@ -483,6 +483,11 @@ Tab       Auto-complete files and directory names
 
 ## git 技巧
 
+- git config（git配置文件可能的路径~/.gitconfig, /etc/gitconfig）
+- 修改git项目的remote url（git项目地址）
+  - 使用git命令行 git remote set-url origin http://192.168.100.235:9797/john/git_test.git
+  - 修改配置文件，当前项目根目录，cd .git, vim config, 找到[remote "origin"] 修改url的值即可
+
 ![](./asset/img/git-command.jpg)
 ![](./asset/img/git-flow.png)
 
@@ -1082,3 +1087,4 @@ http
 ```
 - 前端项目npm install经常报错可能是nodejs版本不一致引起的，可以看看其他可以运行人的版本然后安装他们的版本试试
 - [nvm安装nodejs后，无法使用npm, 本质上是因为各个node版本下的node_modules没有npm，需要收到到淘宝镜像去下载对于版本的npm包，再解压到node_modules目录下](https://segmentfault.com/a/1190000023716452)
+- 前端错误日志可以上传到阿里云，如https://arms-retcode.aliyuncs.com/r.png
