@@ -71,88 +71,88 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 
 ## Quick links
 
-- [技术](#技术)
-  - [程序员必读书目（单）](#程序员必读书目单)
-  - [深入浅出 nodejs 作者前端技能汇总，包括推荐的书籍](#深入浅出-nodejs-作者前端技能汇总包括推荐的书籍)
-  - [2020 年 3 月最受欢迎的 10 个 CSS 项目](#2020-年-3-月最受欢迎的-10-个-css-项目)
-- [唤醒 qq 聊天窗口](#唤醒-qq-聊天窗口)
-- [bash 技巧 shell 技巧](#bash-技巧-shell-技巧)
-  - [bash 技巧，bash 历史命令查找](#bash-技巧bash-历史命令查找)
-  - [常用 shell 命令，常用 bash 命令，不需要 GUI，不需要界面操作](#常用-shell-命令常用-bash-命令不需要-gui不需要界面操作)
-- [Quick links](#quick-links)
-- [copy a file](#copy-a-file)
-- [duplicate a file](#duplicate-a-file)
-- [copy a directory](#copy-a-directory)
-- [duplicate a directory](#duplicate-a-directory)
-- [move a file](#move-a-file)
-- [rename a file](#rename-a-file)
-- [move a directory](#move-a-directory)
-- [rename a directory](#rename-a-directory)
-- [merge directories](#merge-directories)
-- [create a new file](#create-a-new-file)
-- [create a new directory](#create-a-new-directory)
-- [show file/directory size](#show-filedirectory-size)
-- [show file/directory info](#show-filedirectory-info)
-- [open a file with the default program](#open-a-file-with-the-default-program)
-- [zip a directory](#zip-a-directory)
-- [unzip a directory](#unzip-a-directory)
-- [peek files in a zip file](#peek-files-in-a-zip-file)
-- [remove a file](#remove-a-file)
-- [remove a directory](#remove-a-directory)
-- [list directory contents](#list-directory-contents)
-- [tree view a directory and its subdirectories](#tree-view-a-directory-and-its-subdirectories)
-- [find a stale file](#find-a-stale-file)
-- [show a calendar](#show-a-calendar)
-- [find a future date](#find-a-future-date)
-- [use a calculator](#use-a-calculator)
-- [force quit a program](#force-quit-a-program)
-- [check server response](#check-server-response)
-- [view content of a file](#view-content-of-a-file)
-- [search for a text](#search-for-a-text)
-- [view an image](#view-an-image)
-- [show disk size](#show-disk-size)
-- [check performance of your computer](#check-performance-of-your-computer)
-- [Quick tips](#quick-tips)
-- [Hotkeys](#hotkeys)
-- [git 技巧](#git-技巧)
-  - [git 注意事项和错误及解决方案](#git-注意事项和错误及解决方案)
-- [缓存](#缓存)
-  - [搜索技巧](#搜索技巧)
-- [教程](#教程)
-- [阮一峰技术博客](#阮一峰技术博客)
-- [前端开发](#前端开发)
-  - [技术博客](#技术博客)
-  - [工具及工程化](#工具及工程化)
-  - [webapi](#webapi)
-  - [配置 html5 history 模式路由](#配置-html5-history-模式路由)
-  - [类库](#类库)
-  - [前端进阶知识点](#前端进阶知识点)
-  - [前端面试题](#前端面试题)
-  - [错误日志监控](#错误日志监控)
-  - [移动端调试工具](#移动端调试工具)
-  - [Vue3.0](#vue30)
-- [终端命令](#终端命令)
-- [经济理财](#经济理财)
-- [提升效率，小工具，批量处理命令](#提升效率小工具批量处理命令)
-- [各种技术问题汇总及解决方案](#各种技术问题汇总及解决方案)
+- [or](#or)
+- [or](#or-1)
+- [or](#or-2)
+  - [merge directories](#merge-directories)
+  - [show file/directory size](#show-filedirectory-size)
+  - [show file/directory info](#show-filedirectory-info)
+  - [open a file with the default program](#open-a-file-with-the-default-program)
+  - [zip a directory](#zip-a-directory)
+  - [unzip a directory](#unzip-a-directory)
+  - [peek files in a zip file](#peek-files-in-a-zip-file)
+  - [list directory contents](#list-directory-contents)
+  - [tree view a directory and its subdirectories](#tree-view-a-directory-and-its-subdirectories)
+  - [find a stale file](#find-a-stale-file)
+  - [show a calendar](#show-a-calendar)
+  - [find a future date](#find-a-future-date)
+  - [use a calculator](#use-a-calculator)
+  - [force quit a program](#force-quit-a-program)
+  - [check server response](#check-server-response)
+  - [view content of a file](#view-content-of-a-file)
+  - [search for a text](#search-for-a-text)
+  - [view an image](#view-an-image)
+  - [show disk size](#show-disk-size)
+  - [check performance of your computer](#check-performance-of-your-computer)
+  - [Quick tips](#quick-tips)
+  - [Hotkeys](#hotkeys)
+  - [git 技巧](#git-技巧)
+    - [git 注意事项和错误及解决方案](#git-注意事项和错误及解决方案)
+  - [缓存](#缓存)
+    - [搜索技巧](#搜索技巧)
+  - [教程](#教程)
+  - [阮一峰技术博客](#阮一峰技术博客)
+  - [前端开发](#前端开发)
+    - [技术博客](#技术博客)
+    - [工具及工程化](#工具及工程化)
+    - [webapi](#webapi)
+    - [配置 html5 history 模式路由](#配置-html5-history-模式路由)
+    - [类库](#类库)
+    - [前端进阶知识点](#前端进阶知识点)
+    - [前端面试题](#前端面试题)
+    - [错误日志监控](#错误日志监控)
+    - [移动端调试工具](#移动端调试工具)
+    - [Vue3.0](#vue30)
+  - [终端命令](#终端命令)
+  - [经济理财](#经济理财)
+  - [提升效率，小工具，批量处理命令](#提升效率小工具批量处理命令)
+  - [各种技术问题汇总及解决方案](#各种技术问题汇总及解决方案)
 
-## copy a file
 
-**STOP DRAG AND DROPPING A FILE, OR CMD/CTRL + C, CMD/CTRL + V A FILE** :-1:
+创建目录
+$ mkdir 'untitled folder'
+# or
+$ mkdir -p 'path/may/not/exist/untitled\ folder'
 
-Copy `readme.txt` to the `documents` directory
+创建文件
+$ touch 'new file'    # updates the file's access and modification timestamp if it already exists
+# or
+$ > 'new file'        # note: erases the content if it already exists
+or touch a/b/c.txt # 创建文件在a/b/目录下
 
-```shell
-$ cp readme.txt documents/
-```
+拷贝文件夹或者文件
+把a目录拷贝到b目录： 		cp -r a b or cp -a a b
+把a目录下文件拷贝到b目录 	cp -r a/* b/
 
-## duplicate a file
+重命名文件夹
+mv myMedia/ myMusic/
+重命名文件
+mv readme.txt README.md
 
-**STOP RIGHT CLICKING AND DUPLICATE A FILE** :-1:
+移动目录
+$ mv myMedia myMusic/
+# or
+$ mv myMedia/ myMusic/myMedia
 
-```shell
-$ cp readme.txt readme.bak.txt
-```
+移动目录下的文件
+mv a/* b
+
+删除当前目录下的所有文件
+rm -rf ./*
+删除多个文件
+rm -rf ./temp/dialog/* ./temp3/dialog/*
+删除多个目录
+rm -rf temp temp3
 
 More advanced:
 
@@ -161,63 +161,6 @@ $ cp readme{,.bak}.txt
 # Note: learn how the {} works with touch foo{1,2,3}.txt and see what happens.
 ```
 
-## copy a directory
-
-**STOP DRAG AND DROPPING A DIRECTORY, OR CMD/CTRL + C, CMD/CTRL + V A DIRECTORY** :-1:
-
-Copy `myMusic` directory to the `myMedia` directory
-
-```shell
-$ cp -a myMusic myMedia/
-# or
-$ cp -a myMusic/ myMedia/myMusic/
-```
-
-## duplicate a directory
-
-**STOP RIGHT CLICKING AND DUPLICATE A DIRECTORY** :-1:
-
-```shell
-$ cp -a myMusic/ myMedia/
-# or if `myMedia` folder doesn't exist
-$ cp -a myMusic myMedia/
-```
-
-## move a file
-
-**STOP DRAG AND DROPPING A FILE, OR CMD/CTRL + X, CMD/CTRL + V A FILE** :-1:
-
-```shell
-$ mv readme.txt documents/
-```
-
-**Always** use a trailing slash when moving files, [for this reason](http://unix.stackexchange.com/a/50533).
-
-## rename a file
-
-**STOP RIGHT CLICKING AND RENAME A FILE** :-1:
-
-```shell
-$ mv readme.txt README.md
-```
-
-## move a directory
-
-**STOP DRAG AND DROPPING A DIRECTORY, OR CMD/CTRL + X, CMD/CTRL + V A DIRECTORY** :-1:
-
-```shell
-$ mv myMedia myMusic/
-# or
-$ mv myMedia/ myMusic/myMedia
-```
-
-## rename a directory
-
-**STOP RIGHT CLICKING AND RENAME A DIRECTORY** :-1:
-
-```shell
-$ mv myMedia/ myMusic/
-```
 
 ## merge directories
 
@@ -227,25 +170,6 @@ $ mv myMedia/ myMusic/
 $ rsync -a /images/ /images2/	# note: may over-write files with the same name, so be careful!
 ```
 
-## create a new file
-
-**STOP RIGHT CLICKING AND CREATE A NEW FILE** :-1:
-
-```shell
-$ touch 'new file'    # updates the file's access and modification timestamp if it already exists
-# or
-$ > 'new file'        # note: erases the content if it already exists
-```
-
-## create a new directory
-
-**STOP RIGHT CLICKING AND CREATE A NEW DIRECTORY** :-1:
-
-```shell
-$ mkdir 'untitled folder'
-# or
-$ mkdir -p 'path/may/not/exist/untitled\ folder'
-```
 
 ## show file/directory size
 
@@ -299,23 +223,6 @@ $ zipinfo archive_name.zip
 $ unzip -l archive_name.zip
 ```
 
-## remove a file
-
-**STOP RIGHT CLICKING AND DELETE A FILE PERMANENTLY** :-1:
-
-```shell
-$ rm my_useless_file
-```
-
-IMPORTANT: The rm command deletes my_useless_file permanently, which is equivalent to move my_useless_file to Recycle Bin and hit Empty Recycle Bin.
-
-## remove a directory
-
-**STOP RIGHT CLICKING AND DELETE A DIRECTORY PERMANENTLY** :-1:
-
-```shell
-$ rm -r my_useless_folder
-```
 
 ## list directory contents
 
