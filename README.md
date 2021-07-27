@@ -74,6 +74,7 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [or](#or)
 - [or](#or-1)
 - [or](#or-2)
+  - [git 设置代理 git proxy](#git-设置代理-git-proxy)
   - [merge directories](#merge-directories)
   - [show file/directory size](#show-filedirectory-size)
   - [show file/directory info](#show-filedirectory-info)
@@ -161,6 +162,17 @@ $ cp readme{,.bak}.txt
 # Note: learn how the {} works with touch foo{1,2,3}.txt and see what happens.
 ```
 
+## git 设置代理 git proxy
+全局设置代理，取消代理
+git config --global https.proxy http://127.0.0.1:1080     # 1080这个端口每个人设置不一样，看你自己设置的代理端口
+git config --global https.proxy https://127.0.0.1:1080    # 1080这个端口每个人设置不一样，看你自己设置的代理端口
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+
+只对GitHub设置代理，取消代理
+git config --global http.https://github.com.proxy socks5://127.0.0.1:7890  # 7890这个端口每个人设置不一样，看你自己设置的代理端口
+git config --global --unset http.https://github.com.proxy 
 
 ## merge directories
 
