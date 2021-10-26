@@ -213,6 +213,14 @@ $ git archive
   - 初始化本地配置文件，$ git submodule init
   - 检出父仓库列出的 commit，$ git submodule update
 - [如何撤销 Git 操作](http://www.ruanyifeng.com/blog/2019/12/git-undo.html)
+- 修改分支名称
+  - 本地分支重命名(还没有推送到远程) 
+    - git branch -m oldName newName
+  - 远程分支重命名 (已经推送远程-假设本地分支和远程对应分支名称相同)
+    - 重命名远程分支对应的本地分支         git branch -m oldName newName
+    - 删除远程分支                      git push --delete origin oldName
+    - 上传新命名的本地分支                git push origin newName
+    - 把修改后的本地分支与远程分支关联      git branch --set-upstream-to origin/newName
 
 ### git 注意事项和错误及解决方案
 
