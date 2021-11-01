@@ -153,8 +153,9 @@ $ git archive
   - 切换到 master， git checkout master, 同时获取最新代码，git pull
   - 基于当前 master 创建分支， git branch test(or git checkout -b test)
   - 当前分支推送到远程分支，git push origin test，或者 git push origin test(本地分支名):test(远程分支名)
-- git merge 一个指定文件, 从别的分支合并某个文件到当前分支
-  - git checkout other-branch（别的分支名） xxxx（文件名）
+- git 合并部分文件, 从别的分支合并部分文件到当前分支（比如feature1分支的a，b文件合并到master分支）
+  - 先切换到master分支 git checkout master
+  - 把feature1分支的a，b文件合并到master分支 git checkout feature1 src/view/a.vue src/view/b.vue
 - git 撤销指定文件（也可以是指定文件夹）到指定版本
   - git log [filename|folder]
     - 例如： git log sompage.vue 或者 git log src/pages/somefolder
