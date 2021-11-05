@@ -179,8 +179,8 @@ export default function Request (config = {}) {
   const service = getAxiosInstance(config)
 
   return service.request(config).finally(() => {
-    // 请求结束重置请求，以允许用户再次提交
-    requestLocker.set(guid, false)
+    // 请求结束重置请求，以允许用户再次提交, 防止内存泄露
+    requestLocker.delete(guid)
   })
 }
 
