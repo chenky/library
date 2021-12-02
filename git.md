@@ -188,6 +188,10 @@ $ git archive
   - git checkout build src/pages/somefolderName
 - 撤销本地的 commit，回滚到远程分支的代码
   - git reset --hard origin/branchname
+- 只是撤销本地commit
+	- git reset --soft [commitID](如HEAD^最近一次提交,HEAD~1最近一次提交,HEAD~2最近两次提交) 只撤销commit，不删除修改代码
+	- git reset --mixed [commitID] 撤销add和commit， 不删除修改代码
+	- git reset --hard [commitID] 撤销add，commit，删除修改代码
 - 提交代码
   - git add .
   - git commit -m "commit information"
