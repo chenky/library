@@ -1,14 +1,4 @@
 #!/bin/bash
-
-
-# 查看 git 别名
-# @param $1 - 过滤条件，默认为'git'
-_galias () {
-    filter='git'
-    [ $# -ne 0 ] && filter="$@"
-    alias | grep "$filter"
-}
-
 # 推送到远程分支
 # @param $1 远程分支名称，必须, $2为分支tagname，非必须
 _mto() {
@@ -20,11 +10,17 @@ _mto() {
     #    echo 'usage: pushbr [branch-name]'
     #    return 1 
     #}
-	if [ ! -n "$1" ]
+	# 
+	# if [ ! -n "$1" ]
+	# 第一个参数长度为零或者第一个参数是--help则提示帮助信息
+	if [ -z "$1" ] || [ "$1" = "--help" ]
 	then
-		echo 'usage: mto [target-branch-name]'
+		echo 'usage: mto target-branch-name [tagname]';
+		printf "%-19s%-10s%-8s\n" "target-branch-name:" "" "tagname:"; 
+		printf "%-19s%-8s%-10s%-8s\n" "" "必选参数" "" "可选参数";
 		return 1
 	fi
+	
     
     # 先保证本地feature版本是最新的
     git pull --no-edit &&\
@@ -44,13 +40,13 @@ _mto() {
 alias mto='_mto'
 
 # notepad++ open file, 需要对空格转义
-alias np="/D/Program\ Files/Notepad++/notepad++.exe"
+alias np="/D/Program\ Files/Notepad++/notepad++.exe &"
 
 # vscode open file
-alias vscode="/C/Users/EDZ/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe"
+alias vscode="/C/Users/EDZ/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe &"
 
 # chrome
-alias chrome="/C/Program\ Files/Google/Chrome/Application/chrome.exe"
+alias chrome="/C/Program\ Files/Google/Chrome/Application/chrome.exe &"
 
 # 后台运行clash nohup: no hang up不挂起运行 /dev/null 2>&1 标准错误输入标准输入到/dev/null(空文件，即忽略错误) &后台运行
 clash() {
@@ -59,4 +55,8 @@ clash() {
 
 #alias clash="/D/soft/Clash.for.Windows-0.16.2-win/Clash\ for\ Windows.exe &"
 
-alias wechat="/C/Users/EDZ/Desktop/wechat-bat2.bat"
+alias wechat="/C/Users/EDZ/Desktop/wechat-bat2.bat &"
+
+alias zeal="/D/Program\ Files/zeal-portable-0.6.1-windows-x64/zeal.exe &"
+
+alias baidu="/D/Program\ Files/BaiduNetdisk/BaiduNetdisk.exe &"
