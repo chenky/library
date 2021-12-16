@@ -193,6 +193,8 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [介绍如何构建一套可靠的分布式大型软件系统, 系统架构，架构师必备，架构设计，凤凰架构，大型分布式系统](http://icyfenix.cn/)
 
 ## 前端开发
+- [浏览器占有率统计，全球浏览器占有率统计，浏览器兼容性，移动到占有率统计，系统占有率统计](https://gs.statcounter.com/)
+- [国内浏览器占有率统计，用户数据，流量数据统计，分辨率统计，上网统计，用户画像](https://tongji.baidu.com/)
 
 ### 技术博客
 
