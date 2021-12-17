@@ -46,17 +46,29 @@ alias np="/D/Program\ Files/Notepad++/notepad++.exe &"
 alias vscode="/C/Users/EDZ/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe &"
 
 # chrome
-alias chrome="/C/Program\ Files/Google/Chrome/Application/chrome.exe &"
+alias chromenew="/C/Program\ Files/Google/Chrome/Application/chrome.exe &"
+alias chrome="/D/soft/Win_x64_782797_chrome-win/chrome-win/chrome.exe &"
 
 # 后台运行clash nohup: no hang up不挂起运行 /dev/null 2>&1 标准错误输入标准输入到/dev/null(空文件，即忽略错误) &后台运行
 clash() {
 	nohup /D/soft/Clash.for.Windows-0.16.2-win/Clash\ for\ Windows.exe  > /dev/null 2>&1 &
-}
+};
 
-#alias clash="/D/soft/Clash.for.Windows-0.16.2-win/Clash\ for\ Windows.exe &"
+function xmly(){
+	nohup /D/Program\ Files\ \(x86\)/ximalaya-pc/喜马拉雅.exe > /dev/null 2>&1 &
+};
+
+<<'COMMENT'
+也可以这样定义
+_xmly(){
+	nohup /D/Program\ Files\ \(x86\)/ximalaya-pc/喜马拉雅.exe > /dev/null 2>&1 &
+};
+alias xmly='_xmly'
+COMMENT
 
 alias wechat="/C/Users/EDZ/Desktop/wechat-bat2.bat &"
 
 alias zeal="/D/Program\ Files/zeal-portable-0.6.1-windows-x64/zeal.exe &"
 
-alias baidu="/D/Program\ Files/BaiduNetdisk/BaiduNetdisk.exe &"
+alias baidu="/D/Program\ Files\ \(x86\)/BaiduNetdisk/baidunetdisk.exe &"
+
