@@ -10,4 +10,5 @@
 	* 历史原因可能只做了新版本浏览器测试，为了达到A Grade级别兼容，测试需要一个缓冲期
 	* 所有开发下载chrome85版本进行开发测试，关闭自动更新(https://chromium.cypress.io/win64/stable/85.0.4183.83)
 
-1. css !important 禁止shiy
+1. css !important 禁止使用，只有需求百分比确认的情况才允许使用，比如可能会在utils，或者组件中
+2. z-index以祖先元素的为准
