@@ -1,4 +1,18 @@
 #!/bin/bash
+
+
+hypdir="/D/hanyi/project/"
+studydir="/D/study/"
+
+cemdir="${hypdir}cem-demo"
+vfocusdir="${hypdir}vue-focus"
+
+libdir="${studydir}library/"
+iwdir="${studydir}preperation4interview/"
+sdir="${studydir}study/"
+
+
+
 # 推送到远程分支
 # @param $1 远程分支名称，必须, $2为分支tagname，非必须
 _mto() {
@@ -40,7 +54,7 @@ _mto() {
 alias mto='_mto'
 
 # notepad++ open file, 需要对空格转义
-alias np="/D/Program\ Files/Notepad++/notepad++.exe &"
+alias np="/D/Program\ Files/Notepad++/notepad++.exe"
 
 # vscode open file
 alias vscode="/C/Users/EDZ/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe &"
@@ -58,17 +72,16 @@ function xmly(){
 	nohup /D/Program\ Files\ \(x86\)/ximalaya-pc/喜马拉雅.exe > /dev/null 2>&1 &
 };
 
-<<'COMMENT'
-也可以这样定义
-_xmly(){
-	nohup /D/Program\ Files\ \(x86\)/ximalaya-pc/喜马拉雅.exe > /dev/null 2>&1 &
-};
-alias xmly='_xmly'
-COMMENT
+#_xmly(){
+#	nohup /D/Program\ Files\ \(x86\)/ximalaya-pc/喜马拉雅.exe > /dev/null 2>&1 &
+#};
+#alias xmly='_xmly'
 
 alias wechat="/C/Users/EDZ/Desktop/wechat-bat2.bat &"
 
 alias zeal="/D/Program\ Files/zeal-portable-0.6.1-windows-x64/zeal.exe &"
 
 alias baidu="/D/Program\ Files\ \(x86\)/BaiduNetdisk/baidunetdisk.exe &"
+
+alias music="/D/Program\ Files\ \(x86\)/Netease/CloudMusic/cloudmusic.exe &"
 
