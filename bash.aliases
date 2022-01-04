@@ -11,11 +11,14 @@ libdir="${studydir}library/"
 iwdir="${studydir}preperation4interview/"
 sdir="${studydir}study/"
 
+hdadmin="/D/hd/cdt-admin/"
+hdh5="/D/hd/cdt-h5"
+
 
 
 # 推送到远程分支
 # @param $1 远程分支名称，必须, $2为分支tagname，非必须
-_mto() {
+function mto() {
     # 参数校验 $#: 表示所有参数个数，但最后一个参数不能用${$#},因为是特殊字符，应该用${!#}
 	# $*,$@表示所有参数， $*把所有参数作为一个整体，而$@每个参数都是一个个体可以用for遍历
 	# $?来保存上个已执行命令的退出状态码, 成功退出状态码为0， 有错退出状态码为正值
@@ -51,20 +54,23 @@ _mto() {
 	fi
     git checkout -;
 }
-alias mto='_mto'
+#alias mto='_mto'
 
 # notepad++ open file, 需要对空格转义
-alias np="/D/Program\ Files/Notepad++/notepad++.exe"
+#alias np="/D/Program\ Files/Notepad++/notepad++.exe"
+function np(){
+	/D/Program\ Files/Notepad++/notepad++.exe $1 &
+}
 
 # vscode open file
 alias vscode="/C/Users/EDZ/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe &"
 
 # chrome
-alias chromenew="/C/Program\ Files/Google/Chrome/Application/chrome.exe &"
-alias chrome="/D/soft/Win_x64_782797_chrome-win/chrome-win/chrome.exe &"
+alias chrome="/C/Program\ Files/Google/Chrome/Application/chrome.exe &"
+alias chromeold="/D/soft/Win_x64_782797_chrome-win/chrome-win/chrome.exe &"
 
 # 后台运行clash nohup: no hang up不挂起运行 /dev/null 2>&1 标准错误输入标准输入到/dev/null(空文件，即忽略错误) &后台运行
-clash() {
+function clash() {
 	nohup /D/soft/Clash.for.Windows-0.16.2-win/Clash\ for\ Windows.exe  > /dev/null 2>&1 &
 };
 
