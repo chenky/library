@@ -91,3 +91,35 @@ alias baidu="/D/Program\ Files\ \(x86\)/BaiduNetdisk/baidunetdisk.exe &"
 
 alias music="/D/Program\ Files\ \(x86\)/Netease/CloudMusic/cloudmusic.exe &"
 
+# mac bash
+# chrome
+alias chrome="open -a 'Google Chrome'"
+alias note="open -a 'Notes'"
+alias clash="open -a 'Clash for Windows'"
+alias baidu="open -a 'BaiduNetdisk_mac'"
+alias music="open -a 'NeteaseMusic'"
+alias txtv="open -a 'qqlive'"
+alias mgtv="open -a '芒果TV'"
+function wechat(){
+	nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
+	nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
+	#open -n "/Applications/WeChat.app/Contents/MacOS/WeChat" &
+	#open -n "/Applications/WeChat.app/Contents/MacOS/WeChat" &
+}
+# mac .bash_profile
+bashAlias=~/bash.aliases
+if [ -a "$bashAlias" ]
+then
+	. $bashAlias
+fi
+
+#mac .zshrc
+#!/bin/bash
+# export system path
+export PATH="$PATH:/Users/cql/Desktop/Visual Studio Code 2.app/Contents/Resources/app/bin"
+bashAlias=~/bash.aliases
+#test $bashAlias && source $bashAlias
+if [[ -a "$bashAlias" ]]
+then
+	source $bashAlias
+fi
