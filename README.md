@@ -191,6 +191,9 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [IT 初学者教程](https://learn.freecodecamp.one/)
 - [大转盘抽奖](https://100px.net/)
 - [介绍如何构建一套可靠的分布式大型软件系统, 系统架构，架构师必备，架构设计，凤凰架构，大型分布式系统](http://icyfenix.cn/)
+- [游戏编程模式, 设计模式（英文）](http://gameprogrammingpatterns.com/)
+- [游戏编程模式, 设计模式（中文）](https://gpp.tkchu.me/)
+- [Crafting Interpreters 编程语言解释器](https://github.com/GuoYaxiang/craftinginterpreters_zh)
 
 ## 前端开发
 - [浏览器占有率统计，全球浏览器占有率统计，浏览器兼容性，移动到占有率统计，系统占有率统计](https://gs.statcounter.com/)
