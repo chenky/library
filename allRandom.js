@@ -103,7 +103,7 @@ function shuffle2(arr = []) {
 }
 
 /**
- * arr: 原始数组
+ * arr: 原始数组，ids
  * k：随机取k个元素
  * canDuplicate: arr中的元素是否可以被重复取两次+
 */
