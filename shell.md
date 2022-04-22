@@ -52,6 +52,10 @@
 
 ### [常用 shell 命令，常用 bash 命令，不需要 GUI，不需要界面操作](https://github.com/you-dont-need/You-Dont-Need-GUI#duplicate-a-file)
 
+查找文件
+
+查找当前目录下(包括子目录)文件名为icon-hy-add.svg的文件
+find -type f -name "icon-hy-add.svg"
 
 
 创建目录
