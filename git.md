@@ -156,6 +156,9 @@ $ git archive
 - git 合并部分文件, 从别的分支合并部分文件到当前分支（比如feature1分支的a，b文件合并到master分支）
   - 先切换到master分支 git checkout master
   - 把feature1分支的a，b文件合并到master分支 git checkout feature1 src/view/a.vue src/view/b.vue
+- git cherry-pick 其他分支的多个commit合并到当前分支
+	- git checkout 当前分支 
+	- git cherry-pick <commitID> <commitID>
 - git 撤销指定文件（也可以是指定文件夹）到指定版本
   - git log [filename|folder]
     - 例如： git log sompage.vue 或者 git log src/pages/somefolder
