@@ -31,6 +31,15 @@
         return obj === null || ['string', 'number', 'boolean', 'undefined', 'symbol'].indexOf(typeof obj) !== -1
     }
 
+    function toNumber(val) {
+        const n = parseFloat(val)
+        return isNaN(n) ? val : n
+    };
+
+    function isNum(val) {
+        return typeof val === 'number'
+    }
+
     var isPlainObject = function (obj) {
         var proto, Ctor
         // Detect obvious negatives
