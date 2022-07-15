@@ -196,6 +196,7 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [Crafting Interpreters 编程语言解释器](https://github.com/GuoYaxiang/craftinginterpreters_zh)
 - [合同示范文本库](https://cont.12315.cn/)
 - [一个在线画流程图的网站,脑图，思维导图](https://www.diagrams.net/)
+- [一行简单的bash命令行，学习bash命令行的实例，处理工作中的任务](https://github.com/onceupon/Bash-Oneliner)
 
 ## 前端开发
 - [浏览器占有率统计，全球浏览器占有率统计，浏览器兼容性，移动到占有率统计，系统占有率统计](https://gs.statcounter.com/)
