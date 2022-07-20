@@ -54,6 +54,16 @@ function mto() {
 	fi
     git checkout -;
 }
+function gtag(){
+	if [ -z "$1" ]
+	then
+		echo 'usage: gtag tagname';
+		return 1
+	fi
+	git pull --no-edit &&\
+	git tag $1 &&\
+	git push origin $1
+}
 #alias mto='_mto'
 
 # notepad++ open file, 需要对空格转义
