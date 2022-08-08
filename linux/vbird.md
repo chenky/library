@@ -55,6 +55,11 @@
   • 4 为 SUID
   • 2 为 SGID
   • 1 为 Sticky bit
+- sudo命令权限原理
+  - 在sudo於1980年前後被寫出之前，一般使用者管理系統的方式是利用 su 切換為超級使用者。但是使用su的缺點之一在於必須要先告知超級使用者的密碼。
+  - sudo使一般使用者不需要知道超級使用者的密碼即可獲得權限。首先超級使用者將普通用戶的名字、可以執行的特定命令、按照哪種用戶或用戶組的身份執行等信息，登記在特殊的檔案中（通常是/etc/sudoers），即完成對該使用者的授權（此時該使用者稱為「sudoer」）[3]；在一般使用者需要取得特殊權限時，其可在命令前加上「sudo」，此時sudo將會詢問該使用者自己的密碼（以確認終端機前的是該使用者本人），回答後系統即會將該命令的行程以超級使用者的權限執行。之後的一段時間內（預設為5分鐘[4]，可在/etc/sudoers自訂），使用sudo不需要再次輸入密碼。
+  - ![sudo命令，sudo命令原理，sudo原理](./vbirdimg/sudo_principle.jpg)
+
 
 - whereis 与 locate 是利用数据库来搜寻数据，所以相当的快速，而且并没有实际的搜寻硬盘，比较省时间啦, find 是磁盘搜索慢呀
 - which (根据 PATH，寻找『执行程序』) ， which [-a（将所有可以找到的指令均列出，而不止第一个被找到的指令名称）] command
@@ -103,3 +108,31 @@
     - -exec (里面就是指令下达) \;
     - 也就是说，-exec 最后一定要以 \; 结束才行!这样了解了吗?!
   - find / -size +1000k 找出系统中，大于 1MB 的档案
+
+- command [-options] parameter1 parameter2 ...
+指令 选项 参数(1) 参数(2)
+说明：
+0. 一行指令中第一个输入的绝对是『指令(command)』或『可执行档案』
+1. command 为指令的名称，例如变换路径的指令为 cd 等等；
+2. 中刮号[]并不存在于实际的指令中，而加入参数设定时，通常为 - 号，例如 -h；
+有时候完整参数名称会输入 -- 符号，例如 --help；
+3. parameter1 parameter2.. 为依附在 option 后面的参数，
+或者是 command 的参数；
+4. command, -options, parameter1.. 这几个咚咚中间以空格来区分，
+不论空几格 shell 都视为一格；
+5. 按下 [Enter] 按键后，该指令就立即执行。[Enter] 按键为 <CR> 字符，
+他代表着一行指令的开始启动。
+6. 指令太长的时候，可以使用 \ 符号来跳脱 [Enter] 符号，
+使指令连续到下一行。注意！ \ 后就立刻接特殊字符。如下：
+    ```bash
+    cp /var/spool/mail/root /etc/crontab \
+    > /etc/fstab /root
+    ```
+7. 在 Linux 系统中，英文大小写字母是不一样的。举例来说， cd 与 CD 并不同。
+
+- 变量取用变量名称前面加上 $ ， 或者是以${variable} 的方式， 取消变量的方法为：unset 变量名称
+- cd /lib/modules/`uname -r`/kernel， 取得版本信息指令 `uname -r`(在一串指令中，在 ` 之内的指令将会被先执行，而其执行出来的结果将做为外部的输入信息)
+- 单引号内仅能是一般字符 ，而双引号可有特殊符号，如变量，echo ‘print $a’, echo "print $a val"
+- PS1：(提示字符的设定), 即设置cql@WIN-D7434JISCDHxxx MSYS /d/study/library (master)这个格式
+- 自定义变量导出变成环境变量需要用export
+- read -p "Please keyin your name: " -t 30 named 提示使用者 30 秒内输入自己的大名，将该输入字符串做成 named 变量，过期自动忽略。
