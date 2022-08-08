@@ -92,6 +92,9 @@ let email =
 // 写一个正则表达式，能够识别qq.com的所有子域名
 const qqDomain = /^(\w+\.)*qq\.com$/
 
+// 获取html标签中的文字，获取html标签中的文本
+const htmlContent = htmlStr.replace(/<[^>]+>/gim, "")
+
 // reference: https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
 // 严格要求输入框是数值类型，也可以验证小数，其他正则验证， input number
 // Restricts input for the given textbox to the given inputFilter function.

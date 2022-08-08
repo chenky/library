@@ -136,3 +136,43 @@
 - PS1：(提示字符的设定), 即设置cql@WIN-D7434JISCDHxxx MSYS /d/study/library (master)这个格式
 - 自定义变量导出变成环境变量需要用export
 - read -p "Please keyin your name: " -t 30 named 提示使用者 30 秒内输入自己的大名，将该输入字符串做成 named 变量，过期自动忽略。
+- declare [-aixr] variable
+   - -a ：将后面的 variable 定义成为数组 (array)
+   - -i ：将后面接的 variable 定义成为整数数字 (integer)
+   - -x ：用法与 export 一样，就是将后面的 variable 变成环境变量；
+   - -r ：将一个 variable 的变量设定成为 readonly ，该变量不可被更改内容，也不能 unset
+- ulimit [-SHacdflmnpstuv] [配额] 设置使用系统资源的配额
+
+- /home/vbird/testing/testing.x.sh
+2. 在 vbird 变量中，从最前面开始比对，若开头为 / ，则删除两个 /
+之间的所有数据，亦即 /*/
+[root@linux ~]# echo ${vbird##/*/}
+testing.x.sh <==删除了 /home/vbird/testing/
+[root@linux ~]# echo ${vbird#/*/}
+vbird/testing/testing.x.sh <==仅删除 /home/ 而已
+# 这两个小例子有趣了～变量名称后面如果接了两个 ## ，表示在 ##
+# 后面的字符串取『最长的』那一段；如果仅有一个 # ，表示取『最小的那一段』喔！
+3. 承上题，如果是从后面开始，删除 /* 呢？
+[root@linux ~]# echo ${vbird%%/*/}
+/home/vbird/testing/testing.x.sh <==都没被删除
+[root@linux ~]# echo ${vbird%%/*}
+<==被删除光了！
+[root@linux ~]# echo ${vbird%/*}
+/home/vbird/testing <==只删除 /testing.x.sh 部分
+# 这个例子当中需要特别注意，那个 % 比对的是『最后面那个字符』的意思，
+# 所以啰，第一个方式当然不对～因为 vbird 这个变量的内容最后面是 h 而不是 / 啊！
+# 至于 %%/* 则是删除『最长的那个 /* 』，当然就是全部喔！而 %/* 则是最短的那个！
+4. 将 vbird 变数中的 testing 取代为 TEST
+[root@linux ~]# echo ${vbird/testing/TEST}
+/home/vbird/TEST/testing.x.sh
+[root@linux ~]# echo ${vbird//testing/TEST}
+/home/vbird/TEST/TEST.x.sh
+# 如果变量后面接的是 / 时，那么表示后面是进行『取代』的工作～而且仅取代『第一个』
+# 但如果是 // ，则表示全部的字符串都取代啊！
+
+- 执行历史指令
+!number ：执行第几个指令的意思；
+!command ：由最近的指令向前搜寻『指令串开头为 command』的那个指令，并执行；
+!! ：就是执行上一个指令(相当于按↑按键后，按 Enter)
+
+- 逻辑指令执行一般这样做，command1 && command2 || command3
