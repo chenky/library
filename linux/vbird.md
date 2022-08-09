@@ -150,8 +150,8 @@
 testing.x.sh <==删除了 /home/vbird/testing/
 [root@linux ~]# echo ${vbird#/*/}
 vbird/testing/testing.x.sh <==仅删除 /home/ 而已
-# 这两个小例子有趣了～变量名称后面如果接了两个 ## ，表示在 ##
-# 后面的字符串取『最长的』那一段；如果仅有一个 # ，表示取『最小的那一段』喔！
+- 这两个小例子有趣了～变量名称后面如果接了两个 ## ，表示在 ##
+- 后面的字符串取『最长的』那一段；如果仅有一个 # ，表示取『最小的那一段』喔！
 3. 承上题，如果是从后面开始，删除 /* 呢？
 [root@linux ~]# echo ${vbird%%/*/}
 /home/vbird/testing/testing.x.sh <==都没被删除
@@ -159,16 +159,16 @@ vbird/testing/testing.x.sh <==仅删除 /home/ 而已
 <==被删除光了！
 [root@linux ~]# echo ${vbird%/*}
 /home/vbird/testing <==只删除 /testing.x.sh 部分
-# 这个例子当中需要特别注意，那个 % 比对的是『最后面那个字符』的意思，
-# 所以啰，第一个方式当然不对～因为 vbird 这个变量的内容最后面是 h 而不是 / 啊！
-# 至于 %%/* 则是删除『最长的那个 /* 』，当然就是全部喔！而 %/* 则是最短的那个！
+- 这个例子当中需要特别注意，那个 % 比对的是『最后面那个字符』的意思，
+- 所以啰，第一个方式当然不对～因为 vbird 这个变量的内容最后面是 h 而不是 / 啊！
+- 至于 %%/* 则是删除『最长的那个 /* 』，当然就是全部喔！而 %/* 则是最短的那个！
 4. 将 vbird 变数中的 testing 取代为 TEST
 [root@linux ~]# echo ${vbird/testing/TEST}
 /home/vbird/TEST/testing.x.sh
 [root@linux ~]# echo ${vbird//testing/TEST}
 /home/vbird/TEST/TEST.x.sh
-# 如果变量后面接的是 / 时，那么表示后面是进行『取代』的工作～而且仅取代『第一个』
-# 但如果是 // ，则表示全部的字符串都取代啊！
+- 如果变量后面接的是 / 时，那么表示后面是进行『取代』的工作～而且仅取代『第一个』
+- 但如果是 // ，则表示全部的字符串都取代啊！
 
 - 执行历史指令
 !number ：执行第几个指令的意思；
@@ -176,3 +176,87 @@ vbird/testing/testing.x.sh <==仅删除 /home/ 而已
 !! ：就是执行上一个指令(相当于按↑按键后，按 Enter)
 
 - 逻辑指令执行一般这样做，command1 && command2 || command3
+- 既要输出到屏幕又要输出到文件中，请用tee [-a] file
+- 正则处理字符串，有vi, sed, awk等程序工具, 如搜索，替换，删除
+- 格式化打印printf, 文件数据对比diff,cmp,patch; 文档打印对比pr
+
+
+-  grep [-acinv] '搜寻字符串' filename
+   - -a ：将 binary 档案以 text 档案的方式搜寻数据
+   - -c ：计算找到 '搜寻字符串' 的次数
+   - -i ：忽略大小写的不同，所以大小写视为相同
+   - -n ：顺便输出行号
+   - -v ：反向选择，亦即显示出没有 '搜寻字符串' 内容的那一行！
+   - grep -n 't[ae]st' test.txt, grep -n '[^g]oo' test.txt, 英文字母和数字[a-zA-Z0-9]
+   - 行首与行尾字符 ^ $， grep -n '^the' text.txt 以the开始的字符串, grep -n '^[a-z]' text.txt以小写字母开头的字符, grep -n '^[^a-zA-Z]' test.txt不以字母开头
+   - grep -n '\.$' test.txt以.结束， grep -n '^$' test.txt表示空白行
+   - grep -v '^$' ~/bash.aliases.sh | grep -nv '^#'等价于egrep -vn '^$|^#' ~/bash.aliases.sh  过滤空白行和#开头的注释代码
+   - .(任意字符)*(0+个字符), 'g..d'表示以g开头d结束中间两个是任意字符
+   - aa*表示至少一个a字符串， ‘g.*g’以g开头g结尾的任意字符串
+   - grep -n '[0-9] or [0-9][0-9]*' text.txt找出任意数字，grep -n '[0-9]\{2,5\}' test.txt找出2-5个数字 {2,} 2+个数字
+ - printf格式化打印数据
+
+- nl test.txt | sed '2,5d' 删除2-5行数据，'2,$d'删除第二行之后的所有数据
+- nl test.txt | sed '2a append text' 在第三行加上append text
+- nl test.txt | sed '2，5c replace2-5line text'
+- nl test.txt | sed -n '5,7p'
+
+- awk '条件类型 1{动作 1} 条件类型 2{动作 2} ...' filename, 相较于 sed 常常作用于一整个行的处理， awk 则比较倾向于一行当中分成数个『字段』来处理
+- last | awk '{print $1"\t"$3}' 截取第一列和第三列数据并打印出来
+- cat /etc/passwd | awk 'BEGIN{FS=":"} $3<10 {print $1"\t"$3}'在 /etc/passwd 当中是以冒号 ":" 来作为字段的分隔，那假设我要查阅，第三栏小于 10 以下的数据，并且仅列出账号与第三栏
+
+### shell script
+- echo `date --date='2 days ago' +%Y%m%d` 打印两天以前
+- total=$(($firstnu*$secnu))数学运算方式
+- test经常和&&，||一起使用
+- 判断符号 [ ]， [ -z $HOME ] 判断变量是否为空，即$HOME长度为0， -n表示存在
+- test $a = $b && echo 'yes' || echo 'no', [ $a == $b ] && echo 'yes' || echo 'no', [ $a=$b -o $a==1 ] && echo 'yes' || echo 'no'貌似都可以，鸟哥教程是第一，第二种写法，可能是老版本最严格标准的写法，后面的写法可能是新版本对bash语法更兼容了。
+
+if [ 条件判断式一 ]; then
+    当条件判断式一成立时，可以进行的指令工作内容；
+elif [ 条件判断式二 ]; then
+    当条件判断式二成立时，可以进行的指令工作内容；
+else
+    当条件判断式一与二均不成立时，可以进行的指令工作内容；
+fi
+
+- case in 用法
+case $变量名称 in
+    "第一个变量内容")
+        程序段
+        ;;
+    "第二个变量内容")
+        程序段
+        ;;
+    *)
+        不包含第一个变量内容与第二个变量内容的其它程序执行段
+        exit 1
+        ;;
+esac
+
+function fname() {
+    程序段
+}
+
+while [ condition ] 条件成立执行循环
+do
+    程序段落
+done
+
+until [ condition ] 条件成立终止循环
+do
+    程序段落
+done
+
+for (( 初始值; 限制值; 执行步阶 )) 如 for (( i=1; i<=100; i=i+1 ))
+do
+    程序段
+done
+
+for var in con1 con2 con3 ... 如 for file in file1 file2 file3
+do
+    程序段
+done
+
+### 账号与身份管理
+![所有者，组用户，其他用户](./vbirdimg/user_permission.png)
