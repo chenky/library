@@ -298,3 +298,87 @@ done
 
 ### deamon与service
 - 同一台主机通过不同的端口区分不同的服务
+- hosts.allow, hosts.deny优先级
+![](./vbirdimg/hosts_allow_deny_priority.png)
+
+- 阿里云权限判断策略，很符合安全防御策略，最小权限原则，如下图
+![](./vbirdimg/aliyun_permision_strategy.png)
+- linux系统目录结构树
+![](./vbirdimg/linux_dir.jpg)
+
+### 日志相关东西
+- 日志一般放在/var/log/somelog下，
+- 7个级别的日志，不同级别的，不同服务的日志可以通过/etc/syslog.conf配置放在不同的目录下
+- 日志目录可以配置不可删除权限
+- 自动日志定期备份，支持按一定时间段，最多备份多久，是否压缩等等配置
+- last，lastlog，dmesg查看日志
+
+### linux数据备份
+- mysql，redis，kafka等等比较重要的数据建议每天备份，/dev,/proc,/mnt,/tmp等不用备份
+- 备份的工具有tar，cpio等等
+- 最好跨机房备份，免得一个机房出问题了，整个服务就不能用了。
+- 全量备份（tar,cpio,dump,dd）和部分备份
+
+### 硬件信息管理
+- 硬件信息收集，lspci,iostat。
+- 磁盘文件系统LVM
+- 打印机相关处理
+
+### linux核心编译与管理
+1. BIOS
+2. MBR 载入 Loader ( Linux 中的 Lilo 或 Grub 或 SPFdisk 等等 )
+3. 藉由 Loader 的辅助，加载核心档案到主存储器当中，此时核心档案解压缩后， 会开始侦测硬件
+的各项配备，并加载适当的驱动模块来让硬件生效；
+4. 在硬件准备妥当后，加载第一支程序 init ，并藉由 /etc/inittab 的设定来确认预设 run
+level；
+5. 经由 /etc/inittab 及 run level 来决定执行的各项启动的 scripts ；
+6. 开始执行 login 或 X Window 等待登入等。
+
+### linux问答
+- 上一页下一页[Ctrl] + [f]，[Ctrl] + [b]
+- 1G(第一行), G（最后一行）, 0（本行第一列）, $（本行最后一列）
+- ?string（向前搜索）， /string(向后搜索)
+- yy（复制一行）, nyy（复制n行）, p 或 P（粘贴），貌似右键也可以粘贴
+-  如何取代 word1 成为 word2，而若需要使用者确认机制，又该如何？
+   - :1,$s/word1/word2/g 或
+   - :1,$s/word1/word2/gc （需要使用者确认）
+-  如何存档、离开、存档后离开、强制存档后离开？
+   - :w； :q： :wq； :wq!
+-  如何设定与取消行号？
+   - :set nu
+   - :set nonu
+- 查看 Linux 系统的在线求助可以使用什么指令？
+   - man command
+   - info command
+
+- 请问底下的目录与主要放置什么数据？
+   - /etc/：几乎系统的所有设定档案均在此，尤其 passwd, shadow
+   - /etc/rc.d/init.d：系统开机的时候加载服务的 scripts 的摆放地点
+   - /boot：开机设定档，也是预设摆放核心 vmlinuz 的地方
+   - /usr/bin, /bin：一般执行档摆放的地方
+   - /usr/sbin, /sbin：系统管理员常用指令集
+   - /dev：摆放所有系统装置档案的目录
+   - /var/log：摆放系统登录档案的地方
+
+- 如何查看一个档案的『内容』（不要使用 vi 的情况下）
+   - cat, tac, more, less, head, tail, nl, od(查看二进制制)
+
+- 如何搜寻文档
+  - which (仅用于指令搜寻), whereis, locate, find
+
+- 在命令重导向当中， > 与 >> 有什么不同？
+    - > 会将导向的 file 覆盖，
+    - >> 则是增加！
+
+- 在管线指令中，我要将 last 输出的结果显示 root 的『登入次数』， 如何做？
+    last | grep root | cut –d “ “ –f 1 | wc -l
+
+-  如何查询曾经操作过的指令？如何执行第 26 个操作过的指令？上一个操作过的指令？
+    - history
+    - !26
+    - !!
+
+- 万用字符当中， *, ?, [] 各代表什么意思？
+    - * 代表 0 到无限多个字符；
+    - ? 代表一个任意字符；
+    - [] 代表一个字符，这个字符在某一个限制范围内。
