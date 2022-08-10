@@ -259,4 +259,42 @@ do
 done
 
 ### 账号与身份管理
+- 所有者，组用户，其他用户
 ![所有者，组用户，其他用户](./vbirdimg/user_permission.png)
+- /etc/passwd详情，账号的uid，gid会放在这里
+![passwd detail](./vbirdimg/passwd_detail.png)
+- /etc/shadow， 密码以*!开头表示此账号禁用了
+![/etc/shadow， 密码以*!开头表示此账号禁用了](./vbirdimg/etc_shadow_detail.png)
+- /etc/group内容详情
+![/etc/group内容详情](./vbirdimg/group_detail.png)
+- 设置密码校验在/etc/login.defs和/etc/pam.d/passwd
+- 增加账号useradd,修改账号信息usermod,chfn,chsh; 删除账号userdel
+- 群组相关同上groupadd,groupmod,groupdel, gpasswd设置群组密码和群组组长
+- passwd用法
+    passwd [-lunxwS] username
+    -l ：将 username 这个账号的密码锁住 (lock)，在 /etc/shadow 内的密码栏修订～
+    -u ：将 -l 的 lock 解开！
+    -n ：后面接天数 (数字) ，最短天数；亦即是 /etc/shadow 内的第四栏；
+    -x ：后面接天数 (数字) ，最长天数；亦即是 /etc/shadow 内的第五栏；
+    -w ：后面接天数 (数字) ，警告天数；亦即是 /etc/shadow 内的第六栏；
+    -S ：显示目前这个 username 的相关信息。
+- telnet不允许联机登录root，只允许终端机登录， /etc/pam.d/login 内pam_securetty.so 模块和/etc/securetty控制
+
+### 磁盘配额管理（quota）
+
+### 定时任务
+- 仅执行一次的工作： at, atq, atrm（/etc/at.allow 与 /etc/at.deny 这两个档案来进行 at 的使用限制，如果两个档案都不存在，那么只有 root 可以使用 at 这个指令）
+- 定时任务： cron
+
+### 程序与资源管理
+- 查看进程： ps, top, pstree
+- 杀死进程：kill, killall
+- 查看系统资源：free, uname, uptime, netstat, dmesg, sar
+- 进程执行顺序： nice, renice
+
+
+### 开关机流程与loader
+
+
+### deamon与service
+- 同一台主机通过不同的端口区分不同的服务
