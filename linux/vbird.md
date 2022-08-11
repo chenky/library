@@ -382,3 +382,14 @@ level；
     - * 代表 0 到无限多个字符；
     - ? 代表一个任意字符；
     - [] 代表一个字符，这个字符在某一个限制范围内。
+
+
+### OSI七层网络架构
+- [OSI 七层模型与 TCP/IP 四层模型](https://wsgzao.github.io/post/osi/)
+- tcp/ip nat 工作原理
+  - 单ip nat架构图及消息传递原理
+    ![](./vbirdimg/nat-dynamic_multiple_port.jpg)
+    ![](./vbirdimg/NAT-load-balancing.jpg)
+  - 多ip nat架构图及消息传递原理
+    ![](./vbirdimg/nat-dynamic_multiple_ip.jpg)
+    ![](./vbirdimg/NAT-Static-Policy.jpg)
