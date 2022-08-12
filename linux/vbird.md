@@ -474,7 +474,16 @@ Netmask: 11111111.11111111.11111111.1 0000000 255.255.255.128
 
 ### linux网络常用指令
 - ipconfig, ifup,ifdown(start shutdown network),route(查询设定路由表), ip（复合命令，可以直接修改前面提到的功能）, iwlist, iwconfig, dhclient
-- ping, traceroute, netstat, host, nslookup
-- telnet, ftp, lftp, gaim
+- ping, traceroute(追踪两部主机之间通过的各个节点 (node) 通讯状况的好坏呢), netstat(查看各个网络服务及端口的使用情况), host, nslookup(这两个命令域名与ip的对应关系)
+- telnet(登录远程服务器，未加密明文), ftp, lftp, gaim
 - lynx, wget
 - tcpdump, ethereal, nc, netcat
+
+### 路由器Router设定
+- 如同前面网络基础谈到的，每一部主机都有自己的路由表， 也就是说，您必须要透过你自己的路由表来传递你主机的封包到下一个路由器上头。 若传送出去后，该封包就得要透过下一个路由器的路由表来传送了，此时与你自己主机的路由表就没有关啦！ 所以说，如果网络上面的某一部路由器设定错误，那.....封包的流向就会发生很大的问题。 我们就得要透过raceroute 来尝试了解一下每个 router 的封包流向啰。
+![](./vbirdimg/hybrid-routes-diagram.png)
+
+- 静态路由之路由器架构
+![](./vbirdimg/nat_router_gateway.png)
+- 动态路由
+![](./vbirdimg/router_dynamic.png)
