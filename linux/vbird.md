@@ -463,8 +463,18 @@ Netmask: 11111111.11111111.11111111.1 0000000 255.255.255.128
 ![](./vbirdimg/mac_package.png)
 
 - 连上internet的必要网络参数
-• IP: 由 192.168.0~192.168.0.254
-• Netmask: 255.255.255.0• Network: 192.168.0.0
-• Broadcast: 192.168.0.255
-• Gateway: 每个环境都不同，请自行询问网络管理员
-• DNS: 比如 168.95.1.1
+- IP: 由 192.168.0~192.168.0.254
+- Netmask: 255.255.255.0• Network: 192.168.0.0
+- Broadcast: 192.168.0.255
+- Gateway: 每个环境都不同，请自行询问网络管理员
+- DNS: 比如 168.95.1.1
+- ISP
+  - ![](./vbirdimg/ISP.png)
+  - ![](./vbirdimg/ISP_localISP.png)
+
+### linux网络常用指令
+- ipconfig, ifup,ifdown(start shutdown network),route(查询设定路由表), ip（复合命令，可以直接修改前面提到的功能）, iwlist, iwconfig, dhclient
+- ping, traceroute, netstat, host, nslookup
+- telnet, ftp, lftp, gaim
+- lynx, wget
+- tcpdump, ethereal, nc, netcat
