@@ -526,3 +526,13 @@ Netmask: 11111111.11111111.11111111.1 0000000 255.255.255.128
     ![](./vbirdimg/ssh_free_login.png)
 - https 原理
   ![](./vbirdimg/https_principle.jpeg)
+
+保证服务器的安全，配置 ssh 的限制有三种途径, /etc/ssh/sshd_config, /etc/hosts.allow, /etc/hosts.deny; iptables
+
+- 禁止 root 远程登录
+
+```bash
+vim /etc/ssh/sshd_config
+PermitRootLogin no
+/etc/init.d/sshd restart
+```
