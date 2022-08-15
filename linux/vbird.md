@@ -571,3 +571,14 @@ PermitRootLogin no
 ![](./vbirdimg/domain_level.jpg)
 - step of domain query 域名查询过程
 ![](./vbirdimg/step_of_domain_query.png)
+- [dns如何防止被劫持](https://www.3key.company/encrypted_dns)
+  - dns process
+  ![](./vbirdimg/dns_query.webp)
+  - dns hijack， dns劫持
+  ![](./vbirdimg/DNSattacked.webp)
+  - dns security extensions
+  ![](./vbirdimg/DNSSEC.webp)
+  - dns over TLS 
+  ![](./vbirdimg/DNSoverTLS.webp)
+  - dns over https
+  ![](./vbirdimg/DNSoverHTTPS.webp)
