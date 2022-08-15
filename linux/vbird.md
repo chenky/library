@@ -536,3 +536,38 @@ vim /etc/ssh/sshd_config
 PermitRootLogin no
 /etc/init.d/sshd restart
 ```
+
+### NFS共享文件服务器搭建
+```bash
+# 本质就是哪个目录，对哪些机器开放哪些权限
+[root@test root]# vi /etc/exports
+[欲分享的目录] [主机名称 1 或 IP1(参数 1,参数 2)] [主机名称 2 或 IP2(参数 3,参数 4)]
+# ex1这样一来，无论来自哪里(*万用字符！表示万事 OK！)都可以使用我的 /tmp 这
+# 个目录。请注意，那个 *(rw,no_root_squash) 中间没有空格符喔！而 /tmp 与
+# *(rw,no_root_squash) 则是有空格符来隔开的！特别注意到那个
+# no_root_squash 的功能！在这个例子中，如果您是 client 端，而且您是以
+# root 的身份登入您的 Linux 主机，那么当您 mount 上我这部主机的 /tmp 之
+# 后，您在该 mount 的目录当中，将具有『root 的权限！』
+[root@test root]# vi /etc/exports
+/tmp *(rw,no_root_squash)
+# 请注意，在上面的例子中，倒数两行的格式都可以适用！所以只要写一行即可！
+# 上面的例子说的是，当我的 IP 是在 192.168.0.0/24 这个网段的时候，那么
+# 当我在 Client 端挂载了 Server 端的 /home/public 后，针对这个被我挂载
+# 的目录我就具有可以读写的权限～至于如果我不是在这个网段之内，那么这个目录的数据我就仅能读取而已，亦即为只读的属# 性啦！
+/home/public 192.168.0.*(rw) *(ro)
+/home/public 192.168.0.0/24(rw) *(ro)
+#只有 192.168.0.100 这部机器才能对 /home/test这个目录进行存取喔！
+/home/test 192.168.0.100(rw)
+# 让 *.linux.org 网域的主机，登入我的 NFS 主机时，可以存取/home/linux ，但是他们存数据的时候，我希望他们的 # UID 与 GID 都变成 40这个身份的使用者
+/home/linux *.linux.org(rw,all_squash,anonuid=40,anongid=40)
+```
+
+### DHCP
+- dhcp principle
+![](./vbirdimg/DHCP_principle.webp)
+
+### DNS
+- domain level 域名分级，根域名，顶级域名，一级域名，二级域名，三级域名等等
+![](./vbirdimg/domain_level.jpg)
+- step of domain query 域名查询过程
+![](./vbirdimg/step_of_domain_query.png)
