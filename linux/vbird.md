@@ -582,3 +582,12 @@ PermitRootLogin no
   ![](./vbirdimg/DNSoverTLS.webp)
   - dns over https
   ![](./vbirdimg/DNSoverHTTPS.webp)
+
+### www服务器
+- 递归新建a/b/c/d四个目录，并且这四个目录都是之前没有的
+```bash
+# 直接这样mkdir，报错
+mkdir a/b/c/d
+# 加参数-p，则会从上到下递归建立好各层目录
+mkdir a/b/c/d
+```
