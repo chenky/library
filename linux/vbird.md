@@ -591,3 +591,16 @@ mkdir a/b/c/d
 # 加参数-p，则会从上到下递归建立好各层目录
 mkdir a/b/c/d
 ```
+
+### Mail Server
+- mail principle
+  - IMAP, The IMAP stands for Internet Mail Access Protocol. This protocol is used while receiving an email. When one uses IMAP, the emails will be present in the server and not get downloaded to the user’s mail box and deleted from the server. This helps to have less memory used in the local computer and server memory is increased.
+  - POP, The POP stands for Post Office Protocol. This protocol is also used for incoming emails. The main difference with the both protocols is that POP downloads the entire email into the local computer and deletes the data on the server once it is downloaded. This is helpful in a server with less free memory. Current version of POP is POP3.
+  - SMTP, The SMTP stands for Simple Mail Transfer Protocol. Email is sent using this protocol.
+![](./vbirdimg/mails_principle.png)
+![](./vbirdimg/Email-Working.png)
+![](./vbirdimg/pop-protocol2.png)
+- [mail server Architecture](https://www.xmodulo.com/how-mail-server-works.html)
+![](./vbirdimg/mail_diagram.jpg)
+![](./vbirdimg/mail_diagram1.jpg)
+![](./vbirdimg/mail_diagram2.jpg)
