@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .parent{
+      .parent {
         width: 200px;
         height: 200px;
         background-color: blue;
       }
-      .child{
+      .child {
         width: 50px;
         height: 50px;
         background-color: red;
@@ -21,9 +21,7 @@
   <body>
     <div id="useragent"></div>
     <div class="parent">
-      <div class="child">
-        child
-      </div>
+      <div class="child">child</div>
     </div>
     <script>
       // Array.prototype.shuffle = function () {
@@ -46,14 +44,14 @@
       //   let j;
       //   let i = this.length;
       //   while (i > 0) {
-      //     let rnd = Math.random() 
+      //     let rnd = Math.random()
       //     j = parseInt(rnd * i);
-      //     i--;          
+      //     i--;
       //     console.log((this[i].priority/prioritySum), rnd);
       //     if((this[i].priority/prioritySum)>rnd && !this[j].switch){
       //       [this[j], this[i]] = [this[i], this[j]];
       //       this[j].switch = true;
-      //     }        
+      //     }
       //   }
       //   return this;
       // };
@@ -75,15 +73,41 @@
       //     { value: 5, priority: 50 },
       //     { value: 6, priority: 60 },
       //   ].shuffleWithPriority()
-        
+
       // );
-      const ua = navigator.userAgent
-      // is chrome 
-const isChrome = /(?:chrome|crios|crmo)\/(\d+(\.?_?\d+)+)/i.test(ua)
-// is safari
-const isSafari = /(iPhone|iPod|iPad).*AppleWebKit(?=.*Safari)/.test(ua)
-const isMobile = /[^-]mobi/i.test(ua)
-      document.querySelector("#useragent").innerText = isChrome + ',' + isSafari + "," + ua+","+isMobile;
+      //   const ua = navigator.userAgent
+      // is chrome
+      // const isChrome = /(?:chrome|crios|crmo)\/(\d+(\.?_?\d+)+)/i.test(ua)
+      // is safari
+      // const isSafari = /(iPhone|iPod|iPad).*AppleWebKit(?=.*Safari)/.test(ua)
+      // const isMobile = /[^-]mobi/i.test(ua)
+      //   document.querySelector("#useragent").innerText = isChrome + ',' + isSafari + "," + ua+","+isMobile;
+
+      function testPromise(type) {
+        if (type === 1) {
+          return Promise.resolve("sucess");
+        }
+        return Promise.reject("error");
+      }
+      function wrapPro(type) {
+        return testPromise(type).catch((err) => {
+          console.log("err is " + err);
+        });
+      }
+      wrapPro(1)
+        .then((result) => {
+          console.log("wrapPro success", "result is " + result);
+        })
+        .catch((err) => {
+          console.log("wrapPro catch err: " + err);
+        });
+      wrapPro(0)
+        .then((result) => {
+          console.log("wrapPro success", "result is " + result);
+        })
+        .catch((err) => {
+          console.log("wrapPro catch err: " + err);
+        });
     </script>
   </body>
 </html>
