@@ -22,7 +22,10 @@ function mto() {
     # 参数校验 $#: 表示所有参数个数，但最后一个参数不能用${$#},因为是特殊字符，应该用${!#}
 	# $*,$@表示所有参数， $*把所有参数作为一个整体，而$@每个参数都是一个个体可以用for遍历
 	# $?来保存上个已执行命令的退出状态码, 成功退出状态码为0， 有错退出状态码为正值
-	# $0表示当前脚本
+	# $0当前 shell 名称（zsh or bash）或脚本的名字
+	# $_ 代表上一个命令的最后一个参数
+	# $$ 脚本运行的当前进程ID号或所在命令的PID。
+	# $! 代表最后执行的后台命令的PID
     #[ $# -ne 1 ] && {
     #    echo 'usage: pushbr [branch-name]'
     #    return 1 
@@ -60,6 +63,7 @@ function gtag(){
 		echo 'usage: gtag tagname';
 		return 1
 	fi
+	git checkout master &&\
 	git pull --no-edit &&\
 	git tag $1 &&\
 	git push origin $1
@@ -77,11 +81,13 @@ alias vscode="/C/Users/EDZ/AppData/Local/Programs/Microsoft\ VS\ Code/Code.exe &
 
 # chrome
 alias chrome="/C/Program\ Files/Google/Chrome/Application/chrome.exe &"
+alias debugchrome="/C/Program\ Files/Google/Chrome/Application/chrome.exe -remote-debugging-port=9871 &"
 alias chromeold="/D/soft/Win_x64_782797_chrome-win/chrome-win/chrome.exe &"
 
 # 后台运行clash nohup: no hang up不挂起运行 /dev/null 2>&1 标准错误输入标准输入到/dev/null(空文件，即忽略错误) &后台运行
 function clash() {
-	nohup /D/soft/Clash.for.Windows-0.16.2-win/Clash\ for\ Windows.exe  > /dev/null 2>&1 &
+	#nohup /D/soft/Clash.for.Windows-0.16.2-win/Clash\ for\ Windows.exe  > /dev/null 2>&1 &
+	nohup /D/Program\ Files\ \(x86\)/clash/Clash\ for\ Windows.exe  > /dev/null 2>&1 &
 };
 
 function xmly(){
@@ -95,41 +101,37 @@ function xmly(){
 
 alias wechat="/C/Users/EDZ/Desktop/wechat-bat2.bat &"
 
+alias qq="/D/Program\ Files\ \(x86\)/Tencent/QQ/Bin/QQ.exe &"
+
 alias zeal="/D/Program\ Files/zeal-portable-0.6.1-windows-x64/zeal.exe &"
 
 alias baidu="/D/Program\ Files\ \(x86\)/BaiduNetdisk/baidunetdisk.exe &"
 
 alias music="/D/Program\ Files\ \(x86\)/Netease/CloudMusic/cloudmusic.exe &"
 
-# mac bash
-# chrome
-alias chrome="open -a 'Google Chrome'"
-alias note="open -a 'Notes'"
-alias clash="open -a 'Clash for Windows'"
-alias baidu="open -a 'BaiduNetdisk_mac'"
-alias music="open -a 'NeteaseMusic'"
-alias txtv="open -a 'qqlive'"
-alias mgtv="open -a '芒果TV'"
-function wechat(){
-	nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
-	nohup /Applications/WeChat.app/Contents/MacOS/WeChat > /dev/null 2>&1 &
-	#open -n "/Applications/WeChat.app/Contents/MacOS/WeChat" &
-	#open -n "/Applications/WeChat.app/Contents/MacOS/WeChat" &
+#alias dy="/D/Program\ Files\ \(x86\)/ByteDance/douyin/douyin.exe &"
+function dy(){
+	nohup /D/Program\ Files\ \(x86\)/ByteDance/douyin/douyin.exe > /dev/null 2>&1 &
 }
-# mac .bash_profile
-bashAlias=~/bash.aliases
-if [ -a "$bashAlias" ]
-then
-	. $bashAlias
-fi
+#alias dy2="/C/ProgramData/Microsoft/Windows/Start\ Menu/Programs/抖音/抖音 &"
 
-#mac .zshrc
-#!/bin/bash
-# export system path
-export PATH="$PATH:/Users/cql/Desktop/Visual Studio Code 2.app/Contents/Resources/app/bin"
-bashAlias=~/bash.aliases
-#test $bashAlias && source $bashAlias
-if [[ -a "$bashAlias" ]]
-then
-	source $bashAlias
-fi
+alias xshell="/D/Program\ Files\ \(x86\)/NetSarang/Xshell\ 7/Xshell.exe"
+
+alias hosts="np /C/Windows/System32/drivers/etc/hosts"
+
+# git alias
+alias ga='git add'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gl='git pull'
+# checkout
+alias gco='git checkout'
+alias gcb='git checkout -b'
+# merge
+alias gm='git merge'
+
+
