@@ -200,6 +200,14 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [一个在线画流程图的网站,脑图，思维导图](https://www.diagrams.net/)
 - [一行简单的bash命令行，学习bash命令行的实例，处理工作中的任务](https://github.com/onceupon/Bash-Oneliner)
 - [变成语言和工具速查表，如bash语法，nginx配置，vim快捷键及教程，linux命令，git命令，githubActions，http状态码，html字符实体，Emoji清单,流行手机、平板电脑、笔记本电脑和手表的屏幕尺寸、可视窗口尺寸和 CSS 媒体查询](https://wangchujiang.com/reference/)
+- [在线设计软件，平面设计，在线平面设计软件](https://www.canva.com)
+- [录制演示代码，这个工具提供一个 Web IDE，用于让用户演示代码操作。它可以把操作过程录制下来，像视频一样播放，但实际是一个小体积的脚本，便于分享和传播。](https://www.grape.codes)
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 
 ## 前端开发
 - [浏览器占有率统计，全球浏览器占有率统计，浏览器兼容性，移动到占有率统计，系统占有率统计](https://gs.statcounter.com/)
