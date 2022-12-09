@@ -64,7 +64,6 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
   - [提升效率，小工具，批量处理命令](#提升效率小工具批量处理命令)
   - [各种技术问题汇总及解决方案](#各种技术问题汇总及解决方案)
 
-
 ## 缓存
 
 - [前端清理缓存](https://stackoverflow.com/questions/49547/how-do-we-control-web-page-caching-across-all-browsers)
@@ -198,11 +197,11 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [Crafting Interpreters 编程语言解释器](https://github.com/GuoYaxiang/craftinginterpreters_zh)
 - [合同示范文本库](https://cont.12315.cn/)
 - [一个在线画流程图的网站,脑图，思维导图](https://www.diagrams.net/)
-- [一行简单的bash命令行，学习bash命令行的实例，处理工作中的任务](https://github.com/onceupon/Bash-Oneliner)
-- [变成语言和工具速查表，如bash语法，nginx配置，vim快捷键及教程，linux命令，git命令，githubActions，http状态码，html字符实体，Emoji清单,流行手机、平板电脑、笔记本电脑和手表的屏幕尺寸、可视窗口尺寸和 CSS 媒体查询](https://wangchujiang.com/reference/)
+- [一行简单的 bash 命令行，学习 bash 命令行的实例，处理工作中的任务](https://github.com/onceupon/Bash-Oneliner)
+- [变成语言和工具速查表，如 bash 语法，nginx 配置，vim 快捷键及教程，linux 命令，git 命令，githubActions，http 状态码，html 字符实体，Emoji 清单,流行手机、平板电脑、笔记本电脑和手表的屏幕尺寸、可视窗口尺寸和 CSS 媒体查询](https://wangchujiang.com/reference/)
 - [在线设计软件，平面设计，在线平面设计软件](https://www.canva.com)
 - [录制演示代码，这个工具提供一个 Web IDE，用于让用户演示代码操作。它可以把操作过程录制下来，像视频一样播放，但实际是一个小体积的脚本，便于分享和传播。](https://www.grape.codes)
-- []()
+- [LeetCode 解题指南, 算法全解含多种语言，algorithm](https://github.com/doocs/leetcode)
 - []()
 - []()
 - []()
@@ -210,6 +209,7 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - []()
 
 ## 前端开发
+
 - [浏览器占有率统计，全球浏览器占有率统计，浏览器兼容性，移动到占有率统计，系统占有率统计](https://gs.statcounter.com/)
 - [国内浏览器占有率统计，用户数据，流量数据统计，分辨率统计，上网统计，用户画像](https://tongji.baidu.com/)
 
@@ -443,11 +443,11 @@ http
   exit
   ```
 
-
 ## 各种技术问题汇总及解决方案
-- 在windows win10系统中把git for windows sdk中的完整bash功能（包括包管理工具pacman和zsh，oh-my-zsh）集成到vscode visual studio code中
-  - [win10下使用git for windows sdk快速搭建实用又美观的终端](https://www.jianshu.com/p/67df4d3aa22d)
-  - [把安装好的bash集成到vscode中]
+
+- 在 windows win10 系统中把 git for windows sdk 中的完整 bash 功能（包括包管理工具 pacman 和 zsh，oh-my-zsh）集成到 vscode visual studio code 中
+  - [win10 下使用 git for windows sdk 快速搭建实用又美观的终端](https://www.jianshu.com/p/67df4d3aa22d)
+  - [把安装好的 bash 集成到 vscode 中]
   ```javascript
   // ctrl+shift+p, settings.json中
       "terminal.integrated.profiles.windows": {
@@ -461,10 +461,15 @@ http
       },
       "terminal.integrated.defaultProfile.windows": "Bash", // 默认打开的命令行
   ```
-- 前端设置meta可以强制跳转到https
+- 前端设置 meta 可以强制跳转到 https
+
 ```html
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<meta
+  http-equiv="Content-Security-Policy"
+  content="upgrade-insecure-requests"
+/>
 ```
-- 前端项目npm install经常报错可能是nodejs版本不一致引起的，可以看看其他可以运行人的版本然后安装他们的版本试试
-- [nvm安装nodejs后，无法使用npm, 本质上是因为各个node版本下的node_modules没有npm，需要收到到淘宝镜像去下载对于版本的npm包，再解压到node_modules目录下](https://segmentfault.com/a/1190000023716452)
+
+- 前端项目 npm install 经常报错可能是 nodejs 版本不一致引起的，可以看看其他可以运行人的版本然后安装他们的版本试试
+- [nvm 安装 nodejs 后，无法使用 npm, 本质上是因为各个 node 版本下的 node_modules 没有 npm，需要收到到淘宝镜像去下载对于版本的 npm 包，再解压到 node_modules 目录下](https://segmentfault.com/a/1190000023716452)
 - 前端错误日志可以上传到阿里云，如https://arms-retcode.aliyuncs.com/r.png
