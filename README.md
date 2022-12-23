@@ -202,7 +202,7 @@ window.open(`tencent://Message/?Uin=${qidianNumber}&amp;websiteName=qtrade.com.c
 - [在线设计软件，平面设计，在线平面设计软件](https://www.canva.com)
 - [录制演示代码，这个工具提供一个 Web IDE，用于让用户演示代码操作。它可以把操作过程录制下来，像视频一样播放，但实际是一个小体积的脚本，便于分享和传播。](https://www.grape.codes)
 - [LeetCode 解题指南, 算法全解含多种语言，algorithm](https://github.com/doocs/leetcode)
-- []()
+- [开源算法库，github 开源算法，the algorithms](https://the-algorithms.com/zh_Hans)
 - []()
 - []()
 - []()
