@@ -1,0 +1,47 @@
+#Host company 公司账户唯一 id 标识
+
+# AddKeysToAgent yes
+
+# IdentityFile ~/.ssh/company
+
+#Host personal 个人账户唯一 id 标识
+
+# AddKeysToAgent yes
+
+# IdentityFile ~/.ssh/personal
+
+# 公司账户
+
+Host liquido
+HostName github.com
+User git
+
+# AddKeysToAgent yes
+
+IdentityFile ~/.ssh/company
+IdentitiesOnly yes
+PreferredAuthentications publickey
+IdentityAgent /path/to/ssh-agent
+
+# 个人账户
+
+Host chenky
+HostName github.com
+User git
+
+# AddKeysToAgent yes
+
+IdentityFile ~/.ssh/personal
+IdentitiesOnly yes
+PreferredAuthentications publickey
+IdentityAgent /path/to/ssh-agent
+
+# chatgpt project
+
+Host gitee.com
+HostName gitee.com
+User git
+IdentityFile ~/.ssh/personal
+IdentitiesOnly yes
+PreferredAuthentications publickey
+IdentityAgent /path/to/ssh-agent
