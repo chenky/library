@@ -2,4 +2,4 @@
 	name = xxx
 	email = xxx@163.com
 [includeIf "gitdir:/Users/xxx/xxx/project/"]
-    	path = .gitconfig_liquido
+    	path = .gitconfig_lqd
