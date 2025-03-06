@@ -53,9 +53,9 @@
 
   function goToNextPage() {
     console.log("换到新页了，重新开始");
-    const nextPageButton = document
-      .querySelector("div.options-pages a.selected")
-      .nextElementSibling();
+    const nextPageButton = document.querySelector(
+      "div.options-pages a.selected"
+    ).nextElementSibling;
     if (nextPageButton && !nextPageButton.classList.contains("disabled")) {
       // 检查是否禁用
       nextPageButton.click();
