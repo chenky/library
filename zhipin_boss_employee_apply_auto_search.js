@@ -52,8 +52,6 @@
   }
 
   function goToNextPage() {
-    // 换到新页了，重新开始
-    index = 0;
     const nextPageButton = document
       .querySelector("div.options-pages a.selected")
       .nextElementSibling();
