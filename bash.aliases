@@ -68,6 +68,38 @@ function gtag(){
 	git tag $1 &&\
 	git push origin $1
 }
+# r2 branchname，当前分支代码rebase到目标分支branchname上
+r2() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: r2 <branchname>"
+        echo "Rebases current branch into the specified branch"
+        return 1
+    fi
+    
+    local target_branch="$1"
+    local current_branch=$(git rev-parse --abbrev-ref HEAD)
+    
+    if [ "$current_branch" = "$target_branch" ]; then
+        echo "Cannot rebase a branch into itself"
+        return 1
+    fi
+    
+    echo "Rebasing $current_branch into $target_branch..."
+
+    git pull --rebase &&\
+    git checkout "$target_branch" &&\
+    git pull --rebase &&\
+    git rebase "$current_branch" &&\
+    
+    if [ $? -ne 0 ]; then
+        echo "Rebase encountered conflicts. Resolve them and run 'git rebase --continue'"
+        return 1
+    fi
+    
+    git checkout "$current_branch" &&\
+    echo "Successfully rebased $current_branch into $target_branch"
+}
+
 #alias mto='_mto'
 
 # notepad++ open file, 需要对空格转义
